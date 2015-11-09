@@ -20,11 +20,11 @@ nav
     background-color: black;
 }
 
-/*Code pour le fond de la page*/
+/*Code pour le fond de la page
 body
 {
   background: url('Fonds/fond5.jpg');
-}
+}*/
 
 /*Code pour l'en-tête*/
 .fond
@@ -121,15 +121,78 @@ ol
   height:40px;
 }
 
-.nom
+#nom_evenement
 {
-  margin-left: 100px;
-  margin-top: 30px;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
-.quantite
+#nom
 {
-  margin-left: 16px;
+  margin-left: 100px;
+}
+
+#concerne
+{
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+#min
+{
+    margin-left: 197px;
+}
+
+#max
+{
+    margin-left: 192px; 
+}
+
+#duree_evenement
+{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#duree
+{
+    margin-left: 90px;
+}
+
+#description_evenement
+{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#description
+{
+  border: 1px solid black;
+  margin-left: 50px;
+  width: 500px;
+  height: 200px;
+}
+
+#type_lieu
+{
+  margin-left: 100px;
+}
+
+#type
+{
+    margin-left: 158px;
+    width: 100px;
+}
+
+#quantite_lieu
+{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#quantite
+{
+  margin-left: 24px;
 }
 
 h3
@@ -146,18 +209,81 @@ h4
   font-weight: bold;
 }
 
+h5
+{   
+    margin-left: 50px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#nom_lieu
+{
+    margin-left: 100px;
+}
+
 #lieu
 {
-  margin-left: 100px;
+    margin-left: 169px;
+}
+
+#adresse_lieu
+{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#numero
+{
+    margin-left: 132px; 
+}
+
+#adresse
+{
+    margin-left: 199px; 
+}
+
+#postal
+{
+    margin-left: 175px; 
+}
+
+#date
+{
+    margin-left: 100px;
+}
+
+#heure
+{
+    margin-left: 100px;
+}
+
+#heures1
+{
+    margin-left: 175px;
+}
+
+#minutes1
+{
+    margin-left: 10px;
+}
+
+#heures2
+{
+    margin-left: 205px;
+}
+
+#minutes2
+{
+    margin-left: 10px;
 }
 
 .form4
 {
-  width: 150px;
-  margin-left: 300px;
-  margin-top: 10px;
-  display: inline-block;
-  vertical-align: top;
+    width: 150px;
+    margin-left: 300px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .form5
@@ -174,14 +300,6 @@ h4
   width: 180px;
 }
 
-#description
-{
-  border: 1px solid black;
-  margin-left: 300px;
-  margin-top: 10px;
-  width: 500px;
-  height: 200px;
-}
 
 .vendeur, .maxp
 {
