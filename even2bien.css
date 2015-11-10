@@ -1,0 +1,459 @@
+
+
+
+#menu li
+{
+ 
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+    position: relative;
+    margin-right: 112px;
+}
+
+.evt
+{
+    margin-left: 200px;
+}
+#menu a
+{
+    color: white;
+    text-decoration: none;
+}
+
+#menu
+{
+    border-width: 1px solid black;
+    background-color: black;
+   
+    
+}
+
+
+nav
+{
+    border-width: 1px solid black;
+    background-color: black;
+}
+
+.fond
+{
+    position: absolute;
+}
+
+#paris
+{
+  position: absolute;
+  
+}
+
+#even
+
+{
+    position: absolute;
+    top:2px;
+    left:10px;
+    z-index: 5;
+}
+
+
+#searchbar
+{   position: absolute;
+    margin-top: 260px;
+    margin-left: 565px;
+    height: 80px;
+    z-index: 5;
+    }
+
+
+#search
+{
+    border-radius: 2em;
+    width: 392px;
+    height: 34px;
+    border-style:solid;
+    border-width: 1px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px 10px;
+}
+
+#search-btn{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: #EA008A;
+    
+}
+
+
+
+
+
+
+
+.recherche
+{
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 889px;
+    
+   font-size: 20px;
+    
+}
+
+.recherche a /* Liens par défaut (non survolés) */
+{
+   text-decoration: none;
+   color:yellow;
+    font-size: 15px;
+  
+  
+}
+
+.recherche a:hover /* Apparence au survol des liens */
+{
+  text-decoration: underline;
+   color: yellow;
+}
+
+.marathon
+{
+    width: 235px;
+    height: 307px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.cinema
+{
+    width: 235px;
+    height: 307px;
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 50px;
+}
+
+.johny
+{
+    width: 235px;
+    height: 307px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 600px;
+    
+}
+
+
+
+.nouveau
+{
+    margin-top: 100px;
+    margin-left:217px ;
+    width: 889px;
+    height: 500px;
+    
+}
+ 
+.titre1
+{
+    color: #EA008A;
+    font-size: 17px;
+}
+
+
+.choix
+{
+   width: 889px;
+   height: 500px;
+   margin-top:100px;
+   margin-left:217px;
+   margin-bottom: 100px;
+}
+
+.moment
+{
+    color: #EA008A;
+    font-size: 17px;
+}
+
+.hallo
+{
+    width: 235px;
+    height: 307px;
+    position:absolute;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.pic1
+{
+    width: 119px;
+    height: 179px;
+    position:absolute;
+    margin-top: 50px;
+    margin-left: 320px; 
+}
+
+.pic2
+{
+    height: 179px;
+    width: 119px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left:438px;
+}
+
+.pic3
+{
+    
+    width: 237px;
+    height: 125px;
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 228px;
+}
+
+
+
+ul{ border:0; margin:0; padding:0; }
+
+#pagination
+{
+    margin-left: 630px;
+    margin-top: 380px;
+    
+}
+ 
+#pagination li
+{
+    border:0; 
+    margin:0; 
+    padding:0;
+    font-size:11px;
+    list-style:none;
+}
+ 
+#pagination a
+{
+    border:solid 1px #DDDDDD;
+    margin-right:2px;
+}
+ 
+#pagination .previous, #pagination .next
+{
+    color:#666666;
+    display:block;
+    float:left;
+    font-weight:bold;
+    padding:3px 4px;
+}
+ 
+#pagination .next a, #pagination .previous a 
+{
+    font-weight:bold;
+    border:solid 1px #FFFFFF;
+    
+}
+ 
+#pagination .active
+{
+    color:#ff0084;
+    font-weight:bold;
+    display:block;
+    float:left;
+    padding:4px 6px;
+}
+ 
+#pagination a:link, #pagination a:visited 
+{
+    color:#0063e3;
+    display:block;
+    float:left;
+    padding:3px 6px;
+    text-decoration:none;
+}
+ 
+#pagination a:hover
+{
+    border:solid 1px #666666;
+}
+	
+#fin li
+{
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+
+.carnaval
+{
+    width: 119px;
+    height: 178px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 720px;
+}
+
+.jeu
+{
+    width: 119px;
+    height: 178px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 600px;
+}
+
+.ski
+{
+    width: 236px;
+    height: 123px;
+    position: absolute;
+    margin-left: 602.5px;
+    margin-top: 225px;
+}
+
+ul{ border:0; margin:0; padding:0; }
+
+#page
+{
+    margin-left: 600px;
+    margin-top: 380px;
+    
+}
+ 
+#page li
+{
+    border:0; 
+    margin:0; 
+    padding:0;
+    font-size:11px;
+    list-style:none;
+}
+ 
+#page a
+{
+    border:solid 1px #DDDDDD;
+    margin-right:2px;
+}
+ 
+#page .previous, #page .next
+{
+    color:#666666;
+    display:block;
+    float:left;
+    font-weight:bold;
+    padding:3px 4px;
+}
+ 
+#page .next a, #page.previous a 
+{
+    font-weight:bold;
+    border:solid 1px #FFFFFF;
+    
+}
+ 
+#page.active
+{
+    color:#ff0084;
+    font-weight:bold;
+    display:block;
+    float:left;
+    padding:4px 6px;
+}
+ 
+#page a:link, #page a:visited 
+{
+    color:#0063e3;
+    display:block;
+    float:left;
+    padding:3px 6px;
+    text-decoration:none;
+}
+ 
+#page a:hover
+{
+    border:solid 1px #666666;
+}
+	
+
+
+
+
+
+p
+{
+    margin-left: 454px;
+    margin-top: 439px;
+    color: black;
+    text-align: left;
+}
+
+
+#course
+{
+    margin-top: 30px;
+    margin-left: 80px;
+    
+}
+
+#vin
+{
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+#hallyday
+{
+    margin-top: 30px;
+    margin-left: 620px;
+}
+
+
+#activité
+{ 
+display: inline-block;
+margin-left: 630px;
+}
+
+#grand
+{
+    display: inline-block;
+    margin-left: 80px;
+}
+
+#halloween
+{
+    margin-left: 80px;
+}
+
+footer
+{
+    border-width: 1px solid black;
+    background-color: black;
+  
+}
+
+#fin li
+{
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+
+
+#fin a
+{ color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 40px;
+  margin-left: 40px;
+    
+     
+}
+
+.fi
+{
+  margin-left: 250px;
+}
