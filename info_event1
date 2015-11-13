@@ -138,3 +138,518 @@
             </footer>  
 	    </body>
 </html>
+
+CSS
+body
+{
+	/* FAIS GAFFE HERITAGE*/
+    background-color: white; /*Couleur du fond de la page*/
+    
+}	
+
+/*Le haut de la page*/ 
+#menu li
+{
+ 
+    display: inline-block;
+    font-size: 15px;
+    color: white;
+    position: relative;
+    margin-right: 80px;
+}
+
+.evt
+{
+    margin-left: 200px;
+}
+#menu a
+{
+    color: white;
+    text-decoration: none;
+}
+
+#menu
+{
+    border-width: 1px solid black;
+    background-color: black;
+   
+    
+}
+
+
+nav
+{
+    border-width: 1px solid black;
+    background-color: black;
+}
+
+.fond
+{
+    position: absolute;
+}
+
+#paris
+{
+  position: absolute;
+  
+}
+
+#even
+
+{
+    position: absolute;
+    top:13px;
+    left:10px;
+    z-index: 5;
+}
+
+
+#searchbar
+{   position: absolute;
+    margin-top: 1px;
+    margin-left: 565px;
+    height: 80px;
+    z-index: 5;
+    }
+
+
+#search
+{
+    border-radius: 2em;
+    width: 392px;
+    height: 34px;
+    border-style:solid;
+    border-width: 1px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px 10px;
+}
+
+#search-btn{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: #EA008A;
+    
+}
+
+.recherche
+{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 889px;
+    
+   font-size: 20px;
+    
+}
+
+.recherche a /* Liens par défaut (non survolés) */
+{
+   text-decoration: none;
+   color:yellow;
+    font-size: 15px;
+  
+  
+}
+
+.recherche a:hover /* Apparence au survol des liens */
+{
+  text-decoration: underline;
+   color: yellow;
+}
+
+/*CSS bar recherche*/
+.recherche
+{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 889px;
+    
+   font-size: 20px;
+    
+}
+
+.recherche a /* Liens par défaut (non survolés) */
+{
+   text-decoration: none;
+   color:yellow;
+    font-size: 15px;
+  
+  
+}
+
+.recherche a:hover /* Apparence au survol des liens */
+{
+  text-decoration: underline;
+   color: yellow;
+}
+#searchbar
+{   position: absolute;
+    margin-top: 1px;
+    margin-left: 565px;
+    height: 80px;
+    z-index: 5;
+    }
+
+
+#search
+{
+    border-radius: 2em;
+    width: 392px;
+    height: 34px;
+    border-style:solid;
+    border-width: 1px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px 10px;
+}
+
+#search-btn{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: #EA008A;
+    
+}
+
+/*CSS bar recherche*/
+
+/*FIN haut de la page*/ 
+	
+h1 
+{
+    display: block;  /*transformé en block*/
+	text-align: center; /*texte centré*/ 
+	color: blue; /*Couleur du texte*/
+	font-style: oblique; /*texte style écriture*/
+	width: 600px; /*largeur du block*/
+	height: 60px; /*hauteur du block*/
+	background-color: white; /* couleur du fond */
+	font-size: 27px; /* taille du texte*/
+	font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black";   /*pour éviter les problèmes si l'internaute */
+	/*n'a pas la même police que vous, on précise en général plusieurs noms de police, séparés par des virgules. */
+	font-weight: bold; /* texte écrit en gras*/
+	border-width: 3px;  /* épaisseur de la frontière*/
+    border-style:solid; /*le type de frontière, ici trait continu*/
+    border-color: white; /*couleur frontière*/
+	padding: 2px; /*taille marge intérieur*/
+	margin: 10px; /*taille marge extérieur*/
+	position: absolute;
+    left: 420px;
+    top: 530px;
+}
+.photo1 
+{
+    clear: both; /*empecher alignement block automatique*/
+    display: inline; /*transformé en block*/
+	vertical-align: baseline;
+	border-style: solid; /*frontière= trait continu*/
+	border-width: 3px; /*épaisseur frontière*/
+    border-color: white; /*couleur frontière*/
+    width: 400px; /*largeur du block*/
+	height: 600px; /*hauteur du block*/
+	min-width: 10%; /*largeur min du rectangle*/
+	max-width: 700%; /*largeur max du rectangle*/
+	min-height: 10%; /*hauteur min du rectangle*/
+	max-height: 700%; /*hauteur max du rectangle*/
+	padding: 0px; /*taille marge intérieur*/
+	margin: 10px; /*taille marge extérieur*/
+	position: absolute;
+    top: 600px;
+    left: 250px;}
+
+.photo2 
+{
+    clear: both; /*empecher alignement block automatique*/
+    display: inline; /*transformé en block*/
+	vertical-align: baseline;
+	border-style: solid; /*frontière= trait continu*/
+	border-width: 3px; /*épaisseur frontière*/
+    border-color: white; /*couleur frontière*/
+    width: 400px; /*largeur du block*/
+	height: 600px; /*hauteur du block*/
+	min-width: 10%; /*largeur min du rectangle*/
+	max-width: 700%; /*largeur max du rectangle*/
+	min-height: 10%; /*hauteur min du rectangle*/
+	max-height: 700%; /*hauteur max du rectangle*/
+	padding: 0px; /*taille marge intérieur*/
+	margin: 10px; /*taille marge extérieur*/
+	position: absolute;
+    top: 600px;
+    left: 800px;
+}
+
+.photo3 
+{
+    clear: both; 
+    display: inline; 
+	vertical-align: baseline;
+	border-style: solid; 
+	border-width: 3px;
+    border-color: white; 
+    width: 950px; 
+	height: 400px; 
+	min-width: 10%; 
+	max-width: 700%; 
+	min-height: 10%; 
+	max-height: 700%; 
+	padding: 0px; 
+	margin: 10px; 
+	position: absolute;
+    top: 1210px;
+    left: 250px;}	
+	
+.zonetexte
+	{top: 1320px;
+    right: 50px;}	
+	
+.para1
+{  
+    clear: both; 
+    display: block; 
+	color: blue; 
+	font-size: 25px; 
+	text-align: left; 
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; 
+    width: 800px;
+	height: 350px;
+	background-color: white;
+	border-radius: 10px;
+	border-width: 3px;
+    border-style: solid;
+    border-color: black;
+	min-width: 10%;
+	max-width: 700%; 
+	min-height: 10%; 
+	max-height: 700%; 
+	padding: 2px; 
+	margin: 80px; 
+	overflow: scroll; 
+    position: absolute;
+    top: 1750px;
+	left: 260px;
+}
+
+
+.participer
+{
+	display: block; 
+	clear: both;
+	border-style: solid; 
+	border-width: 3px; 
+	width: 130px;
+	height: 30px; 
+	border-radius: 10px;
+	border-color: black;
+	color : #ea008a; 
+    text-align: center;	
+	font-size: 15px; 
+	
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; 
+	background-color: white;
+	position: absolute;
+    top: 1685px;
+	left: 950px;
+}
+
+.particip
+{
+	display: block; 
+	clear: both; 
+	position: absolute;
+	top: 880px; 
+	left: 800px;
+}
+
+.prix
+{
+	display: block; 
+	clear: both; 
+	border-style: solid; 
+	border-width: 3px;
+	width: 130px; 
+	height: 30px;
+	border-radius: 10px;
+	border-color: black;
+	color : #ea008a; 
+	text-align: center;
+	font-size: 15px;
+	padding: 2px;
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; 
+    background-color: white;
+	position: absolute;
+    top: 1670px;
+	left: 700px;
+}
+.inviteramis
+{
+	display: block; 
+	clear: both; 
+	border-style: solid;
+	border-width: 3px; 
+	width: 100px; 
+	height: 45px; 
+	border-radius: 10px;
+	border-color: black;
+	color : #ea008a; 
+	padding: 2px;
+	font-size: 15px;
+	text-align: center;
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; 
+    background-color: white;
+	position: absolute;
+    top: 1670px;
+	left: 400px;
+}
+
+/*CSS pour onglet descriptif et commentaires*/ 
+#comm
+{
+  display: block;
+  position: absolute;
+  top: 1770px;
+  left: 400px;
+}
+
+#onglets
+{
+    font : bold 20px Batang, "Droit Serif", arial, serif;
+    list-style-type : none;
+    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1;
+    margin-left : 0;
+}
+
+#onglets li
+{
+    float : left;
+    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color: #F4F9FD;
+    margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+    border : 1px solid #9EA0A1;
+	
+}
+
+#onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+	
+}
+
+#onglets a
+{
+    display : block;
+    color : #666;
+    text-decoration : none;
+    padding : 4px;
+}
+
+#onglets a:hover
+{
+    background : #fff;
+}
+
+/* FIN CSSonglet descriptif et commentaires*/
+
+
+
+h3
+{
+	color : #ea008a; 
+}
+.où-quand
+{
+	display: block; 
+	clear: both; 
+	border-style: solid; 
+	border-width: 3px; 
+	width: 300px; 
+	height: 475px; 
+	border-radius: 10px;
+	border-color: black;
+	color: black; /* Couleur du texte*/
+	font-size: 20px; /*taille texte*/
+	text-align: center; /*texte centré*/ 
+	font-style: oblique; 
+    font-family: "Comic Sans MS", Verdana, "Comic Sans MS", "Arial Black"; 
+    background-color: white;
+	position: absolute;
+    top: 1700px;
+	left: 10px;
+}
+
+.reserve
+{
+	display: block; /*transformé en block*/
+	clear: both; /*empecher alignement block automatique*/
+	position: absolute;
+    top: 2270px;
+	right: 100px;
+	
+	border-style: solid; /*frontière= trait continu*/
+	border-width: 3px; /*épaisseur frontière*/
+	width: 730px; /*largeur du block*/
+	height: 75px; /*hauteur du block*/
+	border-radius: 10px;
+	border-color: black;
+	color : #ea008a; /* Couleur du texte*/
+	font-size: 15px; /*taille texte*/
+	text-align: left; /* alignement du texte*/
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; /*pour éviter les problèmes si l'internaute n'a pas la même police que vous, on précise en général plusieurs noms de police, séparés par des virgules. */
+    background-color: white;/*Couleur du fond*/
+}
+
+a: visited
+{
+	color: green;
+}
+.sponsors
+{
+    display:  block; /*transformé en block*/
+	clear: both; /*empecher alignement block automatique*/
+	position: absolute;
+	top: 2370px;
+	left: 100px;
+	border-style: solid; /*frontière= trait continu*/
+	border-width: 3px; /*épaisseur frontière*/
+	width: 480px; /*largeur du block*/
+	height: 185px; /*hauteur du block*/
+	border-radius: 10px;
+	border-color: black;
+	background-color: white;/*Couleur du fond*/
+	color: #ea008a;
+}
+
+/*Le bas de la page*/ 
+footer
+{
+    border-width: 1px solid black;
+    background-color: black;
+    margin-top: 2500px;
+}
+
+#fin li
+{
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+
+
+#fin a
+{ color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 40px;
+  margin-left: 40px;
+    
+     
+}
+
+.fi
+{
+  margin-left: 250px;
+}
+
