@@ -124,30 +124,27 @@ h5
     text-decoration: underline;
 }
 
-.selectionner, .remplir
-{
-  font-size: 32px;
-  margin-top: 80px;
-  margin-left: 60px;
-}
-
-ol
-{
-  font-size: 18px;
-  margin-left: 220px;
-}
-
 #accessibilite, #parametres, #information
 {
   float: left;
   margin-left: 300px;
 }
 
+/*Code commun aux pages creer1.php et creer2.php*/
+ol
+{
+  font-size: 18px;
+  margin-left: 220px;
+}
+
+/*Code pour la page creer1.php*/
 .public, .prive, .majeurs, .mineurs, .monde
 {
   width:40px;
   height:40px;
 }
+
+/*COde pour la page creer3.php*/
 
 #nom_evenement
 {
