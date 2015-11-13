@@ -120,7 +120,7 @@ h1
     width: 600px; 
 	height: 60px; 
 	background-color: white; 
-	font-size: 27px; 
+	font-size: 40px; 
 	font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";  
 	font-weight: bold; 
 	border-width: 3px; 
@@ -129,142 +129,58 @@ h1
 	padding: 2px; 
 	margin: 10px;
 	position: absolute;
-    left: 300px;
-    top: 500px;
+    left: 350px;
+    top: 550px;
 }
-.Date
+.table
 {
     display: block;
-    color: white;
-    width: 400px;
-    height: 45px;
+    width: 1200px;
+    height: 70px;
     background-color: black;
-    font-size: 25px;
+    margin-top:600px;
+    margin-left: 60px;
+        
+}
+
+
+
+.haut_tab
+{
+    font-size: 27px;
+    width: 900px;
+    height: 50px;
     font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 3px; 
-    border-style: solid;
-    border-color: black;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 50px;
-    top: 580px;
+    color: deeppink;
+    border-width: 4px;
     text-align: center;
-}
-.evenement
-{
-    display: block;
-    color: white;
-    width: 400px;
-    height: 45px;
-    background-color: black;
-    font-size: 25px;
-    font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 3px; 
     border-style: solid;
     border-color: black;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 450px;
-    top: 580px;
-    text-align: center;     
 }
-.lien
+td
 {
-    display: block;
-    color: white;
-    width: 400px;
-    height: 45px;
-    background-color: black;
-    font-size: 25px;
+    font-size: 24px;
+    width: 950px;
+    height: 50px;
     font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 3px; 
+    color: black;
+    border-width: 6px;
+    text-align: center;
     border-style: solid;
     border-color: black;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 850px;
-    top: 580px;
-    text-align: center;    
-}
-.image
-{
-    clear: both; 
-    display: inline;
-	vertical-align: baseline;
-	border-style: solid;
-	border-width: 5px; 
-    border-color: black; 
-    width: 400px; 
-	height: 490x;  
-	padding: 0px; 
-	margin: 10px; 
-	position: absolute;
-    top: 635px;
-    left: 450px;
+    
+    
+    
+    
+    
     
 }
-#Date_evenement
-{
-    display: block;
-    color: deeppink;
-    width: 390px;
-    height: 500px;
-    background-color: white;
-    font-size: 25px;
-    font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 5px; 
-    border-style: solid;
-    border-color: black;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 50px;
-    top: 635px;
-    text-align: center;   
-}
-.texte_date
-{
-    display: block;
-    color: deeppink;
-    width: 350px;
-    height: 45px;
-    background-color: white;
-    font-size: 23px;
-    font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 0px; 
-    border-style: solid;
-    border-color: white;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 8px;
-    top: 220px;
-    text-align: center;    
-    
-}
-.lien3
-{
-    display: block;
-    color: deeppink;
-    width: 396px;
-    height: 500px;
-    background-color: white;
-    font-size: 25px;
-    font-family: "Droit Serif", "Time New Roman ", Verdana, "Comic Sans MS", "Arial Black";
-    border-width: 5px; 
-    border-style: solid;
-    border-color: black;
-    padding: 2px; 
-	margin: 10px;
-	position: absolute;
-    left: 850px;
-    top: 635px;
-    text-align: center;
-    line-height:
-}
+
+
+
+
+
+
 footer
 {
     border-width: 1px solid black;
@@ -286,7 +202,7 @@ footer
   display: inline-block;
   margin-right: 40px;
   margin-left: 40px;
-    
+
      
 }
 
