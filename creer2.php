@@ -18,12 +18,12 @@
                 <fieldset>  
                     <legend> Créer un évènement </legend>
                         <p>
-                            <img src="Icones/parametres.png"  class="parametres" alt="Paramètres"/><br/>
+                            <img src="Icones/parametres.png" id="parametres" alt="Paramètres"/><br/>
                             <h1>Paramètres</h1>
                         </p>
                         
                         <form method="post" action="traitement.php">
-                        <p class="selectionner">Sélectionnez:</p>
+                        <h2>Sélectionnez:</h2>
                         <ol>
                             <li>Le(s) type(s) d'évènement(s) :</li><br/>
                             <input class="bars/brasseries/cafés" type="button" name="bars/brasseries/cafés" value="Bars/Brasseries/Cafés">

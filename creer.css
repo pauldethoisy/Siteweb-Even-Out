@@ -69,6 +69,8 @@ body
 }
 
 /*Code pour la section de la page*/
+
+/*Code commun aux trois pages creer.php*/
 fieldset
 {
   position: absolute;
@@ -96,6 +98,32 @@ h1
   font-size: 38px;
 }
 
+/*h2
+{
+    font-size: 32px;
+}
+*/
+h3
+{
+  font-size: 28px;
+}
+
+h4
+{
+  font-size: 24px;
+  margin-left: 200px;
+  margin-top: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h5
+{   
+    margin-left: 50px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 .selectionner, .remplir
 {
   font-size: 32px;
@@ -109,7 +137,7 @@ ol
   margin-left: 220px;
 }
 
-.accessibilite, .parametres, .information
+#accessibilite, #parametres, #information
 {
   float: left;
   margin-left: 300px;
@@ -140,12 +168,17 @@ ol
 
 #min
 {
-    margin-left: 197px;
+    width: 180px;
+    margin-left: 162px;
+    /*display: inline-block;
+    vertical-align: top;
+    */
 }
 
 #max
 {
-    margin-left: 192px; 
+    width: 180px;
+    margin-left: 157px; 
 }
 
 #duree_evenement
@@ -156,7 +189,7 @@ ol
 
 #duree
 {
-    margin-left: 90px;
+    margin-left: 85px;
 }
 
 #description_evenement
@@ -223,7 +256,7 @@ h5
 
 #lieu
 {
-    margin-left: 169px;
+    margin-left: 167px;
 }
 
 #adresse_lieu
@@ -234,17 +267,17 @@ h5
 
 #numero
 {
-    margin-left: 132px; 
+    margin-left: 130px; 
 }
 
 #adresse
 {
-    margin-left: 199px; 
+    margin-left: 197px; 
 }
 
 #postal
 {
-    margin-left: 175px; 
+    margin-left: 173px; 
 }
 
 #date
@@ -259,59 +292,139 @@ h5
 
 #heures1
 {
-    margin-left: 175px;
-}
-
-#minutes1
-{
-    margin-left: 10px;
+    margin-left: 168px;
 }
 
 #heures2
 {
-    margin-left: 205px;
+    margin-left: 200px;
 }
 
-#minutes2
+#participants
+{
+    margin-left: 100px;
+}
+
+#partmin
+{
+    margin-left: 22px;
+}
+
+#partmax
+{
+    margin-left: 18px;
+}
+
+#partenaires
+{
+    margin-left: 100px;
+}
+
+#nb
 {
     margin-left: 10px;
 }
 
-.form4
+#nom_vendeur
 {
+    margin-left: 100px;
+}
+
+#vendeur
+{
+    margin-left: 137px;
+}
+
+#type_prix
+{
+    margin-left: 100px;
+}
+
+#gratuit
+{
+    margin-left: 100px;
+}
+
+#payant
+{
+    margin-left: 100px;
+}
+
+#prix
+{
+    margin-left: 100px;
+}
+
+#plein
+{
+    margin-left: 191px;
+}
+
+#plein_description
+{
+    font-weight: bold;
+    margin-left: 266px;
     width: 150px;
-    margin-left: 300px;
-    margin-top: 10px;
-    display: inline-block;
-    vertical-align: top;
 }
 
-.form5
+#reduit
 {
-  width: 150px;
-  margin-left: 50px;
-  margin-top: 10px;
-  display: inline-block;
-  vertical-align: top;
+    margin-left: 176px;
 }
 
-.min, .max
+#reduit_description
 {
-  width: 180px;
+    font-weight: bold;
+    margin-left: 266px;
+    width: 135px;
 }
 
-
-.vendeur, .maxp
+#special
 {
-  width: 180px;
-  margin-left: 300px;
-  margin-top: 10px;
-  display: inline-block;
-  vertical-align: top;
+    margin-left: 171px;
 }
 
+#special_description
+{
+    font-weight: bold;
+    margin-left: 266px;
+    width: 325px;
+}
+
+#site_vendeur
+{
+    margin-left: 100px;
+}
+
+#site
+{
+    margin-left: 131px;
+}
+
+#nom_sponsor
+{
+    margin-left: 100px;
+}
+
+#sponsor
+{
+    margin-left: 139px;
+}
+
+#image_sponsor
+{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#image
+{
+    margin-left: 30px;
+}
+
+/* Bouton envoyer le formulaire*/
 .envoyer
 {
   margin-top: 40px;
-  margin-left: 400px;
+  margin-left: 310px;
 }
