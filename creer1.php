@@ -17,11 +17,11 @@
             <section>
                 <fieldset>  
                     <legend> Créer un évènement </legend>
-                        <p><img src="Icones/accessibilite.png"  class="accessibilite" alt="Accessibilité"/></p>
+                        <p><img src="Icones/accessibilite.png" id="accessibilite" alt="Accessibilité"/></p>
                         <p><br/><h1>Accessibilité</h1></p>
                         
                         <form method="post" action="traitement.php">
-                        <p class="selectionner">Sélectionnez:
+                        <h2>Sélectionnez:</h2>
                         <ol>
                             <li>Le type d'accès :</li><br/>
                             <input class="public" type="checkbox" name="public"/> <label for="public">Accès public (tout le monde)</label><br/>
@@ -32,7 +32,7 @@
                             <input class="mineurs" type="checkbox" name="mineurs"/> <label for="mineurs">Mineurs uniquement</label><br/>
                             <input class="monde" type="checkbox" name="monde"/> <label for="monde">Tout le monde (mineurs et majeurs)</label>
                         </ol>
-                        </p>
+                        </div>
                 </fieldset>
             </section>
         </div>

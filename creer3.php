@@ -19,13 +19,11 @@
                     <fieldset>  
                         <legend> Créer un évènement </legend>
                         
-                        <img src="Icones/information.png"  class="information" alt="Informations"/><br/>
+                        <img src="Icones/information.png" id="information" alt="Informations"/><br/>
                         <h1>Description</h1>
                         
                         <form method="post" action="traitement.php">
-                            <div class="remplir">
-                                Remplissez:
-                            </div>
+                            <h2>Remplissez:</h2>
                             
                             <h3>Informations sur l'évènement:</h3>
 
@@ -36,11 +34,11 @@
                             <div id="concerne">
                                 <h5>Public concerné (par tranche d'âge):</h5>
                                 <p>
-                                    <label for="min">Minimum </label><input id="min" type="range" min="0" max="122"/><label for="min">ans</label>
+                                    <label for="min">Age minimum </label><input id="min" type="range" min="0" max="122" value="0"/><label for="min">ans</label>
                                     (JS à intégrer pour afficher les valeurs)
                                 </p>
                                 <p>
-                                    <label for="max">Maximum </label><input id="max" type="range" min="0" max="122"/><label for="max">ans</label>
+                                    <label for="max">Age maximum </label><input id="max" type="range" min="0" max="122" value="122"/><label for="max">ans</label>
                                     (JS à intégrer pour afficher les valeurs)
                                 </p>
                             </div>
@@ -104,7 +102,6 @@
                                 <p>
                                     <input type="checkbox" id="heure_debut" checked required/><label for="heure_debut">De début<strong><abbr title="obligatoire">*</abbr></strong></label>
                                     <select name="heures1" id="heures1">
-                                        <option selected>Choisir</option>
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -132,7 +129,6 @@
                                     </select>
                                     h
                                     <select name="minutes1" id="minutes1">
-                                        <option selected>Choisir</option>
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -200,7 +196,6 @@
                                 <p>
                                     <input type="checkbox" id="heure_debut/fin"/><label for="heure_debut/fin">De fin</label>
                                     <select name="heures2" id="heures2">
-                                        <option selected>Choisir</option>
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -228,7 +223,6 @@
                                     </select>
                                     h
                                     <select name="minutes2" id="minutes2">
-                                        <option selected>Choisir</option>
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -294,34 +288,31 @@
                                 </p>
                             </div>
 
-                            <div class="participants">
-                                <h5>Nombre minimum/maximum de participants:</h5>
+                            <div id="participants">
+                                <h5>Capacité d'acceuil:</h5>
                                 <p>
-                                    <label for="partmin">Minimum </label><input type="number" id="partmin" step="1" min="0" max="100000000"/>
+                                    <label for="partmin">Nombre minimum de participants</label><input type="number" id="partmin" step="1" min="0" max="100000000"/>
                                 </p>
                                 <p>
-                                    <label for="partmax">Maximum </label><input type="number" id="partmax" step="1" min="0" max="100000000"/>
+                                    <label for="partmax">Nombre maximum de participants</label><input type="number" id="partmax" step="1" min="0" max="100000000"/>
                                 </p>
                             </div>
 
                             <h3>Tarifs:</h3>
 
-                            <p>
-                                <label for="partenaire">Nombre de vendeurs partenaires de l'évènement: </label><input type="number" id="partenaires" min="0" max="9"/>
-                            </p>
+                            <div id="partenaires">
+                                <label for="nb">Nombre de vendeurs partenaires de l'évènement: </label><input type="number" id="nb" min="0" max="9"/>
+                            </div>
                                 
-                            <h4>Vendeurs</h4>
+                            <h4>Vendeur 1</h4>
 
+                            <div id="nom_vendeur">
                             <p>
                                 <label for="vendeur">Nom du vendeur: </label><input type="text" name="vendeur" id="vendeur" placeholder="Ex: Vendeur 1" size="30"/>
                             </p>
-                            <p>
-                                <label for="site">Site web officiel: </label><input type="url" id="site" placeholder="Ex: www.sitefactice.fr"/>
-                            </p>
+                            </div>
 
-                            <h4>Prix</h4>
-
-                            <div id="prix">
+                            <div id="type_prix">
                                 Type de prix:<strong><abbr title="obligatoire">*</abbr></strong>
                                 <p>
                                     <input type="radio" name="prix" id="gratuit" checked/><label for="gratuit">Gratuit</label><br/>
@@ -329,30 +320,46 @@
                                 </p>
                             </div>
 
-                            <p>
-                                <label for="plein">Plein tarif</label><input type="text" name="plein" id="plein" maxlenght="6" placeholder="Ex: 60"/><label for="plein">€</label><br/>
-                                <label for="plein-description">Description du tarif:</label><textarea id="plein-description" name="plein-description">Ex: A partir de 18 ans.</textarea>
-                            </p>
-                            </p>
-                            <p>
-                                <label for="reduit">Tarif réduit</label><input type="text" name="reduit" id="reduit" maxlenght="6" placeholder="Ex: 40"/><label for="reduit">€</label><br/>
-                                <label for="reduit-description">Description du tarif:</label><textarea id="reduit-description" name="reduit-description">Ex: Jusqu'à 18 ans.</textarea>
-                            </p>
-                            <p>
-                                <label for="special">Tarif spécial</label><input type="text" name="special" id="special" maxlenght="6" placeholder="Ex: 50"/><label for="special">€</label><br/>
-                                <label for="special-description">Description du tarif:</label><textarea id="special-description" name="reduit-description">Ex: Pour les membres de la carte fidélité uniquement.</textarea>
-                            </p>
+                            <div id="prix">
+                                Prix:<strong><abbr title="obligatoire">*</abbr></strong>
+                                <p>
+                                    <label for="plein">Plein tarif</label><input type="text" name="plein" id="plein" maxlenght="6" placeholder="Ex: 60"/><label for="plein">€</label><br/>
+                                    <textarea id="plein_description" name="plein_description">Description du tarif:
+(Ex: A partir de 18 ans.)
+                                    </textarea>
+                                </p>
+                                </p>
+                                <p>
+                                    <label for="reduit">Tarif réduit</label><input type="text" name="reduit" id="reduit" maxlenght="6" placeholder="Ex: 40"/><label for="reduit">€</label><br/>
+                                    <textarea id="reduit_description" name="reduit_description">Description du tarif:
+(Ex: Jusqu'à 18 ans.)
+                                    </textarea>
+                                </p>
+                                <p>
+                                    <label for="special">Tarif spécial</label><input type="text" name="special" id="special" maxlenght="6" placeholder="Ex: 50"/><label for="special">€</label><br/>
+                                    <textarea id="special_description" name="reduit_description">Description du tarif:
+(Ex: Pour les membres de la carte fidélité uniquement.)
+                                    </textarea>
+                                </p>
+                            </div>
 
-                            <h3>Sponsors</h3>
-
+                            <div id="site_vendeur">
                             <p>
+                                <label for="site">Site web officiel: </label><input type="url" id="site" placeholder="Ex: www.sitefactice.fr"/>
+                            </p>
+                            </div>
+
+                            <h3>Sponsors:</h3>
+
+                            <div id="nom_sponsor">
                                 <label for="sponsor">Nom du sponsor: </label><input type="text" name="sponsor" id="sponsor" placeholder="Ex: Sponsor 1" size="30"/>
-                            </p>
-                            <p>
+                            </div>
+                            <div id="image_sponsor">
                                 <label for="image">Insérer une image: au format .jpg , .jpeg , .png ou .gif) </label><input type="file" id="image"/>
                             </p>
-
-                            <p><input type="submit" value="Envoyer" class="envoyer"></p>
+                            <p>
+                                <input type="submit" value="Envoyer" class="envoyer">
+                            </p>
 
                         </form>
                     </fieldset>
