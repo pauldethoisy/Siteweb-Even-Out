@@ -1,0 +1,230 @@
+/*Code pour le menu*/
+#menu li
+{
+ 
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 140px;
+    color: white;    
+}
+
+#menu a
+{
+    color: white;
+    text-decoration: none;
+}
+
+nav
+{
+    border-width: 1px solid black;
+    background-color: black;
+}
+
+/*Code pour le fond de la page
+body
+{
+  background: url('Fonds/fond5.jpg');
+}*/
+
+/*Code pour l'en-tête*/
+.fond
+{
+    position: absolute;
+}
+
+#paris
+{
+  position: absolute;
+  
+}
+
+#even
+
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.champ
+{   position: absolute;
+    margin-top: 15px;
+    margin-left: 950px;
+    width: 270px; 
+    height: 80px;
+    }
+
+.search
+{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 1220px;
+}
+
+.avancee
+{
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 1102px;
+}
+
+/*Code pour la section de la page*/
+
+/*Code commun aux 2 pages creer.php*/
+fieldset
+{
+  position: absolute;
+  margin-top: 500px;
+  margin-left:180px ;
+  width: 880px;
+  height: 700px;
+  overflow: auto;
+}
+ 
+legend
+{
+    color: #EA008A;
+    font-size: 48px;
+}
+
+.creer
+{
+	front-size: 15px;
+	font-family: Comic Sans MS, Times New Roman;
+}
+
+h1
+{
+  font-size: 38px;
+}
+
+/*h2
+{
+    font-size: 32px;
+}
+*/
+h3
+{
+  margin-left: 30%;
+  font-size: 28px;
+}
+
+h4
+{
+  font-size: 24px;
+  margin-left: 200px;
+  margin-top: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h5
+{   
+    display: inline-block;
+    margin-left: 10%;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#icone1, #information
+{
+  float: left;
+  margin-left: 300px;
+}
+
+.bouton3, .bouton4, .bouton5
+{
+  margin-left: 20%;
+}
+
+/*Code pour la page creer1.php*/
+
+.boutons
+{
+  margin-left: 20%;
+}
+
+#bars_brasseries_cafes, #cinema, #clubbing, #conferences_colloqiums, #enfants_familles, #festivals, #marches_brocantes, #mode_shopping, #pique-niques, #restaurants, #salons_expositions, #scenes, #soirees, #sports, #visites
+{
+  width: 180px;
+}
+
+#enfants, #filles, #garcons, #adolescents, #jeunes, #etudiants, #femmes, #hommes, #adultes, #actifs, #retraites, #seniors
+{
+  width: 180px;
+}
+
+/*Code pour la page creer2.php*/
+
+.label, .bouton1, .bouton2
+{
+  position: absolute;
+  margin-left: 20%;
+}
+
+.input, .select, .textarea2, .label2
+{
+  position: relative;
+  margin-left: 50%;
+}
+
+.textarea
+{
+  margin-left: 20%;
+}
+
+#min
+{
+    width: 50px;
+}
+
+#max
+{
+    width: 50px;
+}
+
+#description
+{
+  border: 1px solid black;
+  width: 580px;
+  height: 175px;
+}
+
+#type
+{
+    width: 100px;
+}
+
+#partmin
+{
+    width: 80px;
+}
+
+#partmax
+{
+    width: 80px;
+}
+
+#nb
+{
+  width: 20px;
+}
+
+#faible_description
+{
+    font-weight: bold;
+    width: 150px;
+}
+
+#fort_description
+{
+    font-weight: bold;
+    width: 135px;
+}
+
+/* Bouton envoyer le formulaire*/
+.bouton_envoi
+{
+  margin-top: 40px;
+  margin-left: 45%;
+}
