@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     
@@ -50,50 +51,72 @@
                     <h1> Préférences  </h1>
                     
                     
-                    <h2> Lieux </h2>
+                    <div class="Mom"> <aside><br/><h2> Moments</h2>
+                        <p>  
+            <input class="Matin" type="checkbox" name="Matin" id="Matin" /> <label for="Matin">Matin</label> 
+                        </p>
+                        <p>
+             <input class="Après-midi" type="checkbox" name="Après-midi" id="Après-midi" /> <label for="Après-midi">Après-midi</label> 
+                        </p>
+                        <p>
+             <input class="Soir" type="checkbox" name="Soir" id="Soir" /> <label for="Soir">Soir</label> 
+                        </p>
+                        <p>
+              <input class="Nuit" type="checkbox" name="Nuit" id="Nuit" /> <label for="Nuit">Nuit</label> 
+                        </p>
+                       </aside>
+                        </div>
+                    
+                <div class="Lx"> <br/>   <h2>Lieux </h2>
                     
                     <div id="Pays">
                         <label>Pays</label>:
                         <input type="texte" name="pays" id="Pay" size="20" />          </div>
                     
-                    <br/>
+                    <p>
                     
                     <div id="Région">
                         <label>Région</label>:
                         <input type="texte" name="Région" id="Reg" size="20"/>          </div>
-                        
-                    <br/>
+                    </p>   
+                    <p>
                      <div id="Département">
                         <label>Département</label>:
                         <input type="texte" name="Département" id="Dep" size="20" />          </div>
-                    <br/>
+                    </p>
+                    <p>
                     
                       <div id="Ville">
                         <label>Ville</label>:
                         <input type="texte" name="Ville" id="Vi" size="20"/>          </div>
                     
-                    
-                    <br/>
+                    </p>
+                    <p>
                     
                       <div id="code postal">
                         <label>Code postal</label>:
                         <input type="number"  name="Code postale" id="CP"  />          </div>
+                    </p>
+                           </div>
+                 
+        <br/>
+          <h2>Evènements:</h1> 
                     
-                        
-                    
-                            <li><h2>Evènements:</h1></li><br/>
+                    <p>
+                    <br/>
                         <input class="Sport" type="checkbox" name="Sport" id="Sport" /> <label for="Sport">Sport</label>
-                           
+                    
                             <input class="Cinéma" type="checkbox" name="Cinéma" id="Cinéma" /> <label for="Cinéma">Cinéma</label>
+                    
                             <input class="Bars/Brasserie/café" type="checkbox" name="Bars/Brasserie/café" id="Bars/Brasserie/café" /> <label for="Bars/Brasserie/café">Bars/Brasserie/café</label>
                             <input class="Salon/Foire/Brocantes" type="checkbox" name="Salon/Foire/Brocantes" id="Salon/Foire/Brocantes" /> <label for="Salon/Foire/Brocantes">Salon/Foire/Brocantes</label>
                             
-                         
+                    </p>
                         
-                            <br/>
-                            <br/>
-                            
-                        
+                           
+                    <p>
+                    <br/>
+                                  
                      <input class="Art/Culuture" type="checkbox" name="Art/Culuture" id="Art/Culuture" /> <label for="Art/Culuture">Art/Culuture</label>
                            
                              <input class="Visites" type="checkbox" name="Visites" id="Visites" /> <label for="Visites">Visites</label>
@@ -101,8 +124,11 @@
                              <input class="Conférence/Colloquium" type="checkbox" name="Conférence/Colloquium" id="Conférence/Colloquium" /> <label for="Conférence/Colloquium">Conférence/Colloquium</label>
                     
                      <input class="Evenements gastronomique" type="checkbox" name="Evenements gastronomique" id="Evenements gastronomique" /> <label for="Evenements gastronomique">Evènements gastronomique</label>
-                            <br/>
-                            <br/>
+                
+                    </p>
+                    <p>
+                    <br/>
+                            
                     
                           <input class="Soirées" type="checkbox" name="Soirées" id="Soirées" /> <label for="Soirées">Soirées</label>
                     
@@ -113,25 +139,33 @@
                      <input class="Théâtre" type="checkbox" name="Théâtre" id="Théâtre" /> <label for="Théâtre">Théâtre</label> 
                     
                             <input class="Enfants/Famille" type="checkbox" name="Enfants/Famille" id="Enfants/Famille" /> <label for="Enfants/Famille">Enfants/Famille</label> 
-                    
-                    
+                
+                    </p>
                             <br/>
-                            <li><h2>Sport:</h2></li><br/>
+        
+                            <h2>Sport:</h2><br/>
+        
                             <input class="Equipe" type="checkbox" name="Equipe" id="Equipe" /> <label for="Equipe">Equipe</label>
                             <input class="Extrème" type="checkbox" name="Extrème" id="Extrème" /> <label for="Extrème">Extrème</label>
                             <input class="Art Martiaux" type="checkbox" name="Art Martiaux" id="Art Martiaux" /> <label for="Art Martiaux">Art Martiaux</label>
                              <input class="Artistique" type="checkbox" name="Artistique" id="Artistique" /> <label for="Artistique">Artistique</label>
                             
                             <br/>
+                            <br/>
                             
-                             <li><h2>Film:</h2></li><br/>
+                             <h2>Film:</h2><br/>
+        
                             <input class="Comédie" type="checkbox" name="Comédie" id="Comédie" /> <label for="Comédie">Comédie</label> 
                             <input class="Action" type="checkbox" name="Action" id="Action" /> <label for="Action">Action</label>    
                             <input class="Romantique" type="checkbox" name="Romantique" id="Romantique" /> <label for="Romantique">Romantique</label>
                             <input class="Science Fiction" type="checkbox" name="Science Fiction" id="Science Fiction" /> <label for="Science Fiction">Science Fiction</label>
-                              <input class="Romantique" type="checkbox" name="Aventure" id="Romantique" /> <label for="Romantique">Romantique</label>
+                              <input class="Historique" type="checkbox" name="Historique" id="Historique" /> <label for="Historique">Historique</label>
                             
-                            <li><h2>Musique:</h2></li><br/>
+                            <br/>
+                            <br/>
+        
+                            <h2>Musique:</h2><br/>
+        
                             <input class="Jazz" type="checkbox" name="Jazz" id="Jazz" /> <label for="Jazz">Jazz</label> 
                              <input class="Rock" type="checkbox" name="Rock" id="Rock" /> <label for="Rock">Rock</label> 
                              <input class="Classique" type="checkbox" name="Classique" id="Classique" /> <label for="Classique">Classique</label> 
@@ -139,7 +173,11 @@
                              <input class="Rap/R&B" type="checkbox" name="Rap/R&B" id="Rap/R&B" /> <label for="Rap/R&B">Rap/R&amp;B</label>
                              <input class="House" type="checkbox" name="House" id="House" /> <label for="House">House</label>
                     
-                            <li><h2>Restaurants:</h2></li><br/>
+                              <br/>
+                              <br/>
+        
+                            <h2>Restaurants:</h2>                                   <br/>
+        
                             <input class="Culinaires" type="checkbox" name="Culinaires" id="Culinaires" /> <label for="Culinaires">Culinaires</label> 
                              <input class="Asiatique" type="checkbox" name="Asiatique" id="Asiatique" /> <label for="Asiatique">Asiatique</label> 
                              <input class="Français" type="checkbox" name="Français" id="Français" /> <label for="Français">Français</label> 
@@ -147,11 +185,15 @@
                              <input class="Fast food" type="checkbox" name="Fast food" id="Fast food" /> <label for="Fast food">Fast food</label>
                              <input class="Autres" type="checkbox" name="Autres" id="Autres" /> <label for="Autres">Autres</label>
                     
-                    
-                         <li><h2>Enfant/Famille:</h2></li><br/>
+                               <br/>
+                            <br/>
+        
+                         <h2>Enfant/Famille:</h2>   <br/>
                             <input class="Parc d'attraction" type="checkbox" name="Parc d'attraction" id="Parc d'attraction" /> <label for="Parc d'attraction">Parc d'attraction</label> 
                             <input class="Aquarium" type="checkbox" name="Aquarium" id="Aquarium" /> <label for="Aquarium">Aquarium</label>
                             <input class="Pique-nique" type="checkbox" name="Pique-nique" id="Pique-nique" /> <label for="Pique-nique">Pique-nique</label>
+        
+                                <br/>
                             </form>
                     
                     
@@ -179,4 +221,5 @@
 
     </body>
 </html>
+
 
