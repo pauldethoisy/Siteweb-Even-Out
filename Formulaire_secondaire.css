@@ -112,7 +112,7 @@ fieldset
     margin-left:217px ;
     width: 780px;
     height: 80%;
-    
+    background-color: #aca8a8;
 }
  
 legend
@@ -121,6 +121,10 @@ legend
     font-size: 48px;
 }
 
+body
+{
+    background-color: grey;
+}
 
 h1
 {
@@ -209,14 +213,21 @@ input[type=texte], input[type=number]
 {
  box-shadow:1px 1px 1px #ea008a;
  cursor:pointer;
-;
+ background-color:  #f4cee4 ;
+  
 
 }  
 input[type=checkbox]
   {
  box-shadow:1px 1px 1px #ea008a;
  cursor:pointer;
+ background-color: #f4cee4;
 
-   background-color:#ea008a;
+}
+
+aside
+{
+ float: right;
+ margin-right: 150px;
 
 }
