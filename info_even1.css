@@ -1,8 +1,6 @@
-
 body
 {
-
-    background-color: white; /*Couleur du fond de la page*/
+    background-color: white;
     
 }	
 
@@ -177,62 +175,62 @@ nav
 	
 h1 
 {
-    display: block;  /*transformé en block*/
-	text-align: center; /*texte centré*/ 
-	color: blue; /*Couleur du texte*/
-	font-style: oblique; /*texte style écriture*/
-	width: 600px; /*largeur du block*/
-	height: 60px; /*hauteur du block*/
-	background-color: white; /* couleur du fond */
-	font-size: 27px; /* taille du texte*/
-	font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black";   /*pour éviter les problèmes si l'internaute */
-	/*n'a pas la même police que vous, on précise en général plusieurs noms de police, séparés par des virgules. */
-	font-weight: bold; /* texte écrit en gras*/
-	border-width: 3px;  /* épaisseur de la frontière*/
-    border-style:solid; /*le type de frontière, ici trait continu*/
-    border-color: white; /*couleur frontière*/
-	padding: 2px; /*taille marge intérieur*/
-	margin: 10px; /*taille marge extérieur*/
+    display: block;  
+	text-align: center; 
+	color: blue;
+	font-style: oblique;
+	width: 600px;
+	height: 60px; 
+	background-color: white; 
+	font-size: 27px; 
+	font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black";  
+	
+	font-weight: bold; 
+	border-width: 3px; 
+    border-style:solid; 
+    border-color: white; 
+	padding: 2px; 
+	margin: 10px; 
 	position: absolute;
     left: 420px;
     top: 530px;
 }
 .photo1 
 {
-    clear: both; /*empecher alignement block automatique*/
-    display: inline; /*transformé en block*/
+    clear: both; 
+    display: inline; 
 	vertical-align: baseline;
-	border-style: solid; /*frontière= trait continu*/
-	border-width: 3px; /*épaisseur frontière*/
-    border-color: white; /*couleur frontière*/
-    width: 400px; /*largeur du block*/
-	height: 600px; /*hauteur du block*/
-	min-width: 10%; /*largeur min du rectangle*/
-	max-width: 700%; /*largeur max du rectangle*/
-	min-height: 10%; /*hauteur min du rectangle*/
-	max-height: 700%; /*hauteur max du rectangle*/
-	padding: 0px; /*taille marge intérieur*/
-	margin: 10px; /*taille marge extérieur*/
+	border-style: solid; 
+	border-width: 3px; 
+    border-color: white;
+    width: 400px; 
+	height: 600px; 
+	min-width: 10%; 
+	max-width: 700%; 
+	min-height: 10%; 
+	max-height: 700%; 
+	padding: 0px; 
+	margin: 10px; 
 	position: absolute;
     top: 600px;
     left: 250px;}
 
 .photo2 
 {
-    clear: both; /*empecher alignement block automatique*/
-    display: inline; /*transformé en block*/
+    clear: both; 
+    display: inline; 
 	vertical-align: baseline;
-	border-style: solid; /*frontière= trait continu*/
-	border-width: 3px; /*épaisseur frontière*/
-    border-color: white; /*couleur frontière*/
-    width: 400px; /*largeur du block*/
-	height: 600px; /*hauteur du block*/
-	min-width: 10%; /*largeur min du rectangle*/
-	max-width: 700%; /*largeur max du rectangle*/
-	min-height: 10%; /*hauteur min du rectangle*/
-	max-height: 700%; /*hauteur max du rectangle*/
-	padding: 0px; /*taille marge intérieur*/
-	margin: 10px; /*taille marge extérieur*/
+	border-style: solid; 
+	border-width: 3px; 
+    border-color: white; 
+    width: 400px; 
+	height: 600px; 
+	min-width: 10%; 
+	max-width: 700%; 
+	min-height: 10%; 
+	max-height: 700%;
+	padding: 0px; 
+	margin: 10px; 
 	position: absolute;
     top: 600px;
     left: 800px;
@@ -374,7 +372,7 @@ h1
 {
     font : bold 20px Batang, "Droit Serif", arial, serif;
     list-style-type : none;
-    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    padding-bottom : 24px; 
     border-bottom : 1px solid #9EA0A1;
     margin-left : 0;
 }
@@ -382,7 +380,7 @@ h1
 #onglets li
 {
     float : left;
-    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    height : 21px; 
     background-color: #F4F9FD;
     margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
     margin : 1px 2px 0 2px;  /* Pour IE  */
@@ -428,9 +426,9 @@ h3
 	height: 475px; 
 	border-radius: 10px;
 	border-color: black;
-	color: black; /* Couleur du texte*/
-	font-size: 20px; /*taille texte*/
-	text-align: center; /*texte centré*/ 
+	color: black; 
+	font-size: 20px; 
+	text-align: center; 
 	font-style: oblique; 
     font-family: "Comic Sans MS", Verdana, "Comic Sans MS", "Arial Black"; 
     background-color: white;
@@ -441,23 +439,23 @@ h3
 
 .reserve
 {
-	display: block; /*transformé en block*/
-	clear: both; /*empecher alignement block automatique*/
+	display: block; 
+	clear: both; 
 	position: absolute;
     top: 2270px;
 	right: 100px;
 	
-	border-style: solid; /*frontière= trait continu*/
-	border-width: 3px; /*épaisseur frontière*/
-	width: 730px; /*largeur du block*/
-	height: 75px; /*hauteur du block*/
+	border-style: solid; 
+	border-width: 3px; 
+	width: 730px; 
+	height: 75px; 
 	border-radius: 10px;
 	border-color: black;
-	color : #ea008a; /* Couleur du texte*/
-	font-size: 15px; /*taille texte*/
-	text-align: left; /* alignement du texte*/
-    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; /*pour éviter les problèmes si l'internaute n'a pas la même police que vous, on précise en général plusieurs noms de police, séparés par des virgules. */
-    background-color: white;/*Couleur du fond*/
+	color : #ea008a; 
+	font-size: 15px; 
+	text-align: left; 
+    font-family: "Droit Serif", Verdana, "Comic Sans MS", "Arial Black"; 
+    background-color: white;
 }
 
 a: visited
@@ -466,18 +464,18 @@ a: visited
 }
 .sponsors
 {
-    display:  block; /*transformé en block*/
-	clear: both; /*empecher alignement block automatique*/
+    display:  block; 
+	clear: both;
 	position: absolute;
 	top: 2370px;
 	left: 100px;
-	border-style: solid; /*frontière= trait continu*/
-	border-width: 3px; /*épaisseur frontière*/
-	width: 480px; /*largeur du block*/
-	height: 185px; /*hauteur du block*/
+	border-style: solid; 
+	border-width: 3px; 
+	width: 480px; 
+	height: 185px; 
 	border-radius: 10px;
 	border-color: black;
-	background-color: white;/*Couleur du fond*/
+	background-color: white;
 	color: #ea008a;
 }
 
@@ -511,3 +509,4 @@ footer
 {
   margin-left: 250px;
 }
+
