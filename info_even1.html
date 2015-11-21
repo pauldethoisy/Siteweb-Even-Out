@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" /> <!--Clavier et caractères Latin européen-->
-        <link rel="stylesheet" href="V1.css" /> <!--indique que le fichier "" sera 
-		celui de la mise en forme,extension CSS-->
+        <meta charset="utf-8" /> 
+        <link rel="stylesheet" href="info_event1.css" /> 
         <title> 007 Spectre </title>
     </head>
 
     <body>
+	<?php include("menu.php") ?>
+        
+    <?php include("entete.php") ?>
+	
 	    <nav>
             <ul id="menu"> <!-- en tete  -->
                 <span class="evt"><li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li></span>
@@ -19,7 +22,7 @@
             </ul>
         </nav>
         
-		<div id="searchbar">  <!-- Code pour la barre de recherche -->
+		<div id="searchbar">  
                
         <form action="search"  method="get" class="formulaire">                    
                    
@@ -34,13 +37,18 @@
             <a href="recherche.html"> recherche avancée</a>
         </div>
         <header class ="fond">
-             <!-- photo du site -->
+             
         
                 <img id="paris" src="C:\Users\anis\Desktop\info_even\paris.jpg" width="1333" height="407">
 				
 			                     
             
         </header>
+	 <!-- fin du haut page -->
+	 
+	 
+	 
+	 
 	 
                
 	<h1> 007 Spectre, le dernier James Bond </h1> 
@@ -52,13 +60,15 @@
 					<img src="C:\Users\anis\Desktop\red007.jpg"  alt="tapis rouge spectre" title="007 spectre" class="photo3" />
             </div>    
 
-    <a href="http://www.creation-du-web.com/honolulu/cours-html-javascript-page7.html" class="button" ><span class="participer"> Y participer? </span></a>
+			
+			<!-- les boutons --> 
+    <a href="http://www.creation-du-web.com/honolulu/cours-html-javascript-page7.html" class="button" ><span class="participer"> Y participer?</span></a>
     
 	 
 	<a href="http://www.creation-du-web.com/honolulu/cours-html-javascript-page7.html"> </a>
 	
 	<p class="prix"> Gratuit / Prix </p>
-    <p class="inviteramis"> Inviter des amis </p>	
+    <p class="inviteramis">+ Inviter des amis</p>	
 
 	
 	<p class="para1"> Je suis un grand fan de la saga James Bond, ayant lu la plus part des livres et surtout visionné 
@@ -71,16 +81,32 @@
 
 	<!-- Où et quand -->
 	<div class="où-quand">
-	<h3><em>Où et Quand ?</em></h3> <br/> 
-	Sorti le 10 novembre<br/> 
-	Séance de 19h30- 22h15<br/> 
-	UGC Ciné Cité Les Halles<br/> 
+	<h3><em>Où et Quand ?</em></h3> <br/>
+    <?php
+	if (isset($_GET['d']) AND isset($_GET['m']) AND isset($_GET['Y']) AND isset($_GET['H']) AND isset($_GET['i']) AND isset($_GET['Lieu_spectr007']) 
+		AND isset($_GET['ville_spectr007']) AND isset($_GET['arrondissement_spectr007']) AND isset($_GET['agepublic']) AND isset($_GET['nb_maxparticip'])  )	
+	{	
+	       echo 'Sorti le' . $_GET['d'] .' '.$_GET['m'] .' '.$_GET['Y'] <br/> 
+	'Séance de' . $_GET['H'] . 'H' . $_GET['i'] <br/> 
+	'A' . $_GET['Lieu_spectr007'] <br/>  
 	<br/>
-	Adresse : 7, place de la Rotonde 75001 Paris 1er arrondissement<br/>  
-	Public : 10ans et +<br/>  
-	Nombre participants : 150 <br/> 
+	'Adresse :' .$_GET['adresse_spectr007'] .' '.$_GET['ville_spectr007'].' '.$_GET['arrondissement_spectr007'] <br/>  7, place de la Rotonde 75001 Paris 1er arrondissement <br/> 
+	'Public :' .$_GET['agepublic'] <br/>  Public : 10 ans et +<br/>  
+	'Nombre maximum de participants :' .$_GET['nb_maxparticip'] ;  Nombre maximum de participants :150 personnes<br/> 
+
+    }
+	
+	else // Le visiteur à modifier des paramètres, on avertit le visiteur
+    {
+	echo 'Il semblerait qu une erreur se soit produite :-(  , veillez revenir à la page précédente !';
+    }
+	
+    ?>
+	
 	</div>
 	
+	
+	<!-- commentaires -->
 	<div class="les-commentaires" >
       <form method="post" action="traitement.php">
    <p>
@@ -94,22 +120,21 @@
 	
 	
 	
-<!-- DEBUT onglet descriptif et commentaires-->
+<!-- onglet descriptif et commentaires-->
  <div id="comm">
   <ul id="onglets">
     <li><a "Descriptif.html">Descriptif</a></li>
-    <li class="active"><a href="V2.html">Commentaire</a></li>
-    
-    
-    
+    <li class="active"><a href="C:\Users\anis\Desktop\le site\info_event2.html">Commentaire</a></li>   
   </ul>
 </div>
-<!-- FIN onglet descriptif et commentaires -->
+
+
+
 
 
 <div class="reserve" >
-         <p> Si vous souhaitez réserve votre place voici le lien: <br/>   
-           <a href="https://www.ugc.fr/reservationAccueil.html?id=330171124930&part=all "> 
+         <p>Si vous souhaitez réserve votre place voici le lien: <br/>   
+           <a href="https://www.ugc.fr/reservationAccueil.html?id=330171124930&part=all" target="_blank">
            https://www.ugc.fr/reservationAccueil.html?id=330171124930&part=all 
 		 </p>   
 	  
@@ -117,7 +142,7 @@
 
 	
 <div class="sponsors" >
- <p> Les sponsors de l'événement </p>
+ <p> Les sponsors de l'événement : </p>
 
 </div>
 	
@@ -126,7 +151,7 @@
 	 
             <footer>
 			
-                <ul id="fin"> <!-- en tete  -->
+                <ul id="fin"> 
 				<link rel="stylesheet" href="V1.css" />
                 <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
                 <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
@@ -138,8 +163,5 @@
             </footer>  
 	    </body>
 </html>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> fb7c87cdb5ab7f163d54838d124caa9e08d1f773
+  
+     
