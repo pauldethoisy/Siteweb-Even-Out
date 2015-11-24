@@ -22,12 +22,12 @@
                         <img src="Icones/information.png" id="information" alt="Informations"/><br/>
                         <h1>Informations</h1>
                         
-                        <form method="post" action="traitement.php">
+                        <form method="post" action="apercu.php">
                             <h2>Remplissez:</h2>
                             
                             <h3>L'évènement:</h3>
 
-                            <div id="nom_evenement">
+                            <div class="nom_evenement">
                                 <h5>Nom</h5>
                                 <div class="label">
                                     <label for="nom">Nom de l'évènement:<strong><abbr title="obligatoire">*</abbr></strong></label>
@@ -37,27 +37,27 @@
                                 </div>
                             </div>
 
-                            <div id="date">
+                            <div class="date">
                                 <h5>Date</h5>
                                 <div class="bouton1">
-                                    <input type="checkbox" id="date_debut" checked required/><label for="date_debut"> De début<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    <input type="checkbox" name="date_debut" id="date_debut" checked required/><label for="date_debut"> De début<strong><abbr title="obligatoire">*</abbr></strong>:</label>
                                 </div>
                                 <div class="input">
                                     (Calendrier à coder)
                                 </div>
                                 <div class="bouton2">
-                                    <input type="checkbox" id="date_fin"/><label for="date_fin"> De fin:</label>
+                                    <input type="checkbox" name="date_fin" id="date_fin"/><label for="date_fin"> De fin:</label>
                                 </div>
                                 <div class="input">
                                     (Calendrier à coder)
                                 </div>
                             </div>
 
-                            <div id="heure">
+                            <div class="heure">
                                 <h5>Heure</h5>
 
                                 <div class="bouton1">
-                                    <input type="checkbox" id="debut" checked required/><label for="debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
+                                    <input type="checkbox" name"heure_debut" id="heure_debut" checked required/><label for="heure_debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
                                 </div>
                                 <div class="select">
                                     <select name="heures1" id="heures1">
@@ -152,7 +152,7 @@
                                     min
                                 </div>
                                 <div class="bouton2">
-                                    <input type="checkbox" id="fin"/><label for="fin"> De fin:</label>
+                                    <input type="checkbox" name="heure_fin" id="heure_fin"/><label for="heure_fin"> De fin:</label>
                                 </div>
                                 <div class="select">
                                     <select name="heures2" id="heures2">
@@ -248,37 +248,37 @@
                                 </div>
                             </div>
 
-                            <div id="concerne">
+                            <div class="concerne">
                                 <h5>Public concerné</h5>
                                 <div class="label">
-                                    <label for="min">Age minimum<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    <label for="age_min">Age minimum<strong><abbr title="obligatoire">*</abbr></strong>:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="min" id="min" id="duree" maxlenght="3" placeholder="Ex: 18" required/><label for="min"> ans</label>
+                                    <input type="text" name="age_min" id="age_min" maxlenght="3" placeholder="Ex: 18" required/><label for="age_min"> ans</label>
                                 </div>
                                 <div class="label">
-                                    <label for="max">Age maximum:</label>
+                                    <label for="age_max">Age maximum:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="max" id="max" id="duree" maxlenght="3" placeholder="Ex: 122"/><label for="max"> ans</label>
+                                    <input type="text" name="age_max" id="age_max" maxlenght="3" placeholder="Ex: 122"/><label for="age_max"> ans</label>
                                 </div>
                             </div>
 
-                            <div id="description_evenement">
+                            <div class="description_evenement">
                                 <h5>Description<strong><abbr title="obligatoire">*</abbr></strong></h5>
                                 <div class="textarea">
-                                    <textarea id="description" name="description" required>A propos de l'organisation de l'évènement ...</textarea>
+                                    <textarea id="description" name="description" required>A propos de l'organisation de l'évènement :</textarea>
                                 </div>
                             </div>
 
                             <h3>Le lieu:</h3>
 
-                            <div id="type_lieu">
+                            <div class="types_lieux">
                                 <div class="label">
-                                    <label for="type">Type de lieu<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    <label for="type_lieu">Type de lieu<strong><abbr title="obligatoire">*</abbr></strong>:</label>
                                 </div>
                                 <div class="select">
-                                    <select name="type" id="type">
+                                    <select name="type_lieu" id="type_lieu">
                                         <option selected>Choisir</option>
                                         <option value="salle">Salle</option>
                                         <option value="scene">Scène</option>
@@ -290,23 +290,22 @@
                                 </div>
                             </div>
 
-                            <div id="nom_lieu">
+                            <div class="noms_lieux">
                                 <div class="label">
-                                    <label for="lieu">Nom du lieu<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    <label for="nom_lieu">Nom du lieu:<strong><abbr title="obligatoire">*</abbr></strong>:</label>
                                 </div>
-                                <br/>
                                 <div class="input">
-                                    <input type="text" name="lieu" id="lieu" placeholder="Ex: Rues de Paris" size="30" required/>
+                                    <input type="text" name="nom_lieu" id="nom_lieu" placeholder="Ex: Rues de Paris" size="30" required/>
                                 </div>
                             </div>
 
-                            <div id="adresse_lieu">
+                            <div class="adresse_lieu">
                                 <h5>Adresse du lieu</h5>
                                 <div class="label">
-                                    <label for="numero">Numéro d'adresse:</label>
+                                    <label for="numero_adresse">Numéro d'adresse:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="numero" id="numero" maxlenght="7" placeholder="Ex: 1" size="30"/>
+                                    <input type="text" name="numero_adresse" id="numero_adresse" maxlenght="7" placeholder="Ex: 1" size="30"/>
                                 </div>
                                 <div class="label">
                                     <label for="adresse">Adresse<strong><abbr title="obligatoire">*</abbr></strong>:</label>
@@ -315,33 +314,33 @@
                                     <input type="text" name="adresse" id="adresse" placeholder="Ex: Place de l'opéra" size="30" required/>
                                 </div>
                                 <div class="label">
-                                    <label for="postal">Code postal<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    <label for="code_postal">Code postal<strong><abbr title="obligatoire">*</abbr></strong>:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="postal" id="postal" maxlenght="5" placeholder="Ex: 75009" size="30" required/>
+                                    <input type="text" name="code_postal" id="code_postal" maxlenght="5" placeholder="Ex: 75009" size="30" required/>
                                 </div>
                             </div>
 
-                            <div id="participants">
+                            <div class="participants">
                                 <h5>Capacité d'acceuil</h5>
                                 <div class="label">
-                                    <label for="partmax">Nombre maximum de participants:</label>
+                                    <label for="nb_participants_max">Nombre maximum de participants:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="number" id="partmax" step="1" min="0" max="100000000"/>
+                                    <input type="number" name="nb_participants_max" id="nb_participants_max" step="1" min="0" max="100000000"/>
                                 </div>
                             </div>
 
                             <h3>Les Tarifs:</h3>
 
 
-                            <div id="vendeurs">
+                            <div class="vendeurs">
                                 <h5>Vendeurs partenaires</h5>
                                 <div class="label">
-                                    <label for="nb">Nombre de vendeurs: </label>
+                                    <label for="nb_vendeurs">Nombre de vendeurs: </label>
                                 </div>
                                 <div class="input">
-                                    <input type="number" id="nb" min="0" max="9"/>
+                                    <input type="number" name="nb_vendeurs" id="nb_vendeurs" min="0" max="9"/>
                                 </div>
                                 <div class="label">
                                     <label for="noms_vendeurs">Noms des vendeurs: </label>
@@ -350,44 +349,44 @@
                                     <input type="text" name="noms_vendeurs" id="noms_vendeurs" placeholder="Ex: Vendeur 1, Vendeur 2, ..." size="30"/>
                                 </div>
                                 <div class="label">
-                                    <label for="site">Sites web vendeurs: </label>
+                                    <label for="url_sites_vendeurs">Sites web vendeurs: </label>
                                 </div>
                                 <div class="input">
-                                    <input type="url" id="site" placeholder="Ex: www.sitefactice.fr"/>
+                                    <input type="url" name="url_sites_vendeurs" id="url_sites_vendeurs" placeholder="Ex: www.sitefactice.fr"/>
                                 </div>
                             </div>
 
-                            <div id="type_prix">
+                            <div class="types_prix">
                                 <h5>Type de prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
                                 <div class="bouton4">
-                                    <input type="radio" name="prix" id="gratuit" checked/><label for="gratuit"> Gratuit</label>
+                                    <input type="radio" name="type_prix" id="gratuit" checked/><label for="gratuit"> Gratuit</label>
                                 </div>
                                 <div class="bouton5">
-                                    <input type="radio" name="prix" id="payant"/><label for="payant"> Payant</label>
+                                    <input type="radio" name="type_prix" id="payant"/><label for="payant"> Payant</label>
                                 </div>
                             </div>
 
-                            <div id="prix">
+                            <div class="prix">
                                 <h5>Prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
                                 <div class="label">
-                                    <label for="faible">Prix faible:</label>
+                                    <label for="prix_faible">Prix faible:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="faible" id="faible" maxlenght="6" placeholder="Ex: 60"/><label for="faible"> €</label>
+                                    <input type="text" name="prix_faible" id="faible" maxlenght="6" placeholder="Ex: 60"/><label for="prix_faible"> €</label>
                                 </div>
                                 <div class="textarea2">
-                                    <textarea id="faible_description" name="faible_description">Description du tarif:
+                                    <textarea id="faible_description" name="prix_faible_description">Description du tarif:
 (Ex: A partir de 18 ans.)
                                     </textarea>
                                 </div>
                                 <div class="label">
-                                    <label for="fort">Prix fort:</label>
+                                    <label for="prix_fort">Prix fort:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="fort" id="fort" maxlenght="6" placeholder="Ex: 40"/><label for="fort"> €</label>
+                                    <input type="text" name="prix_fort" id="prix_fort" maxlenght="6" placeholder="Ex: 40"/><label for="prix_fort"> €</label>
                                 </div>
                                 <div class="textarea2">
-                                    <textarea id="fort_description" name="fort_description">Description du tarif:
+                                    <textarea id="fort_description" name="prix_fort_description">Description du tarif:
 (Ex: Jusqu'à 18 ans.)
                                     </textarea>
                                 </div>
@@ -395,71 +394,71 @@
 
                             <h3>La galerie:</h3>
 
-                            <div id="images">
+                            <div class="images">
                                 <h5>Images</h5>
                                 <div class="label">
-                                    <label for="image">Insérer une image:</label>
+                                    <label for="galerie_image">Insérer une image:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="file" name="image" id="image"/>
+                                    <input type="file" name="galerie_image" id="galerie_image"/>
                                 </div>
                                 <div class="label2">
-                                    <label for"logo">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    <label for="galerie_image">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
                                 </div>
                             </div>
 
-                            <div id="videos">
+                            <div class="videos">
                                 <h5>Vidéos</h5>
                                 <div class="label">
-                                    <label for="video">Insérer une vidéo:</label>
+                                    <label for="galerie_video">Insérer une vidéo:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="file" name="video" id="video"/>
+                                    <input type="file" name="galerie_video" id="galerie_video"/>
                                 </div>
                                 <div class="label2">
-                                    <label for"logo">(formats .AVI, .MOV, .MP4, .MPEG ou .WMV)</label>
+                                    <label for="galerie_video">(formats .AVI, .MOV, .MP4, .MPEG ou .WMV)</label>
                                 </div>
                             </div>
 
-                            <div id="musiques">
+                            <div class="musiques">
                                 <h5>Musiques</h5>
                                 <div class="label">
-                                    <label for="musique">Insérer une musique:</label>
+                                    <label for="galerie_musique">Insérer une musique:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="file" name="musique" id="musique"/>
+                                    <input type="file" name="galerie_musique" id="galerie_musique"/>
                                 </div>
                                 <div class="label2">
-                                    <label for"logo">(formats .MP3, .ACC, .WMA, ou .OGG)</label>
+                                    <label for="galerie_musique">(formats .MP3, .ACC, .WMA, ou .OGG)</label>
                                 </div>
                             </div>
-
+                            
                             <h3>Les sponsors:</h3>
 
-                            <div id="nom_sponsor">
+                            <div class="sponsors">
                                 <h5>Noms</h5>
                                 <div class="label">
-                                    <label for="sponsor">Noms des sponsors:</label>
+                                    <label for="noms_sponsors">Noms des sponsors:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="text" name="sponsor" id="sponsor" placeholder="Ex: Sponsor 1, Sponsor 2, ..." size="30"/>
+                                    <input type="text" name="noms_sponsors" id="noms_sponsors" placeholder="Ex: Sponsor 1, Sponsor 2, ..." size="30"/>
                                 </div>
                             </div>
 
-                            <div id="image_sponsor">
+                            <div class="image_sponsor">
                                 <h5>Logos</h5>
                                 <div class="label">
-                                    <label for="logo">Insérer un logo:</label>
+                                    <label for="logos_sponsors">Insérer un logo:</label>
                                 </div>
                                 <div class="input">
-                                    <input type="file" id="logo"/>
+                                    <input type="file" name="logos_sponsors" id="logos_sponsors"/>
                                 </div>
                                 <div class="label2">
-                                    <label for"logo">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    <label for="logos_sponsors">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
                                 </div>
 
                             <div class="bouton_envoi">
-                                <input type="submit" value="Envoyer" class="envoyer">
+                                <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
                             </div>
 
                         </form>

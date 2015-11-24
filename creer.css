@@ -154,6 +154,11 @@ h5
   width: 180px;
 }
 
+.suivant
+{
+  margin-left: 45%;
+  margin-top: 10%;
+}
 /*Code pour la page creer2.php*/
 
 .label, .bouton1, .bouton2
@@ -173,12 +178,12 @@ h5
   margin-left: 20%;
 }
 
-#min
+#age_min
 {
     width: 50px;
 }
 
-#max
+#age_max
 {
     width: 50px;
 }
@@ -190,33 +195,28 @@ h5
   height: 175px;
 }
 
-#type
+#type_lieu
 {
     width: 100px;
 }
 
-#partmin
+#nb_participants_max
 {
     width: 80px;
 }
 
-#partmax
-{
-    width: 80px;
-}
-
-#nb
+#nb_vendeurs
 {
   width: 20px;
 }
 
-#faible_description
+#prix_faible_description
 {
     font-weight: bold;
     width: 150px;
 }
 
-#fort_description
+#prix_fort_description
 {
     font-weight: bold;
     width: 135px;
@@ -225,6 +225,6 @@ h5
 /* Bouton envoyer le formulaire*/
 .bouton_envoi
 {
-  margin-top: 40px;
+  margin-top: 10%;
   margin-left: 45%;
 }

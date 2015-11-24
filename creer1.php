@@ -20,37 +20,37 @@
                         <p><img src="Icones/parametres.png" id="icone1" alt="Accessibilité"/></p>
                         <p><br/><h1>Paramétrages</h1></p>
                         
-                        <form method="post" action="traitement.php">
+                        <form method="get" action="traitement.php">
                         <h2>Sélectionnez:</h2>
 
-                        <h3>Accessibilité</h3>
+                        <h3>Accessibilité:</h3>
 
-                        <div id="type_acces">
-                            <h5>Le type d'accès:</h5>
+                        <div class="type_acces">
+                            <h5>Le type d'accès</h5>
                             <div class="bouton3">
-                                <input id="public" type="checkbox" name="public"/> <label for="public">Accès public (tout le monde)</label>
+                                <input type="radio" name="acces" id="public"/> <label for="public">Accès public (tout le monde)</label>
                             </div>
                             <div class="bouton4">
-                            <input id="prive" type="checkbox" name="prive"/> <label for="prive">Accès privé (utilisateurs invités uniquement)</label>
+                            <input type="radio" name="acces" id="prive"/> <label for="prive">Accès privé (utilisateurs invités uniquement)</label>
                             </div>
                         </div>
-                        <div id="droit_accès">
-                            <h5>Le droit d'accès:</h5>
+                        <div class="droit_acces">
+                            <h5>Le droit d'accès</h5>
                             <div class="bouton3">
-                                <input id="majeurs" type="checkbox" name="majeurs"/> <label for="majeurs">Majeurs uniquement</label>
+                                <input type="radio" name="droits" id="majeurs"/> <label for="majeurs">Majeurs uniquement</label>
                             </div>
                             <div class="bouton4">
-                                <input id="mineurs" type="checkbox" name="mineurs"/> <label for="mineurs">Mineurs uniquement</label>
+                                <input type="radio" name="droits" id="mineurs"/> <label for="mineurs">Mineurs uniquement</label>
                             </div>
                             <div class="bouton5">
-                                <input id="monde" type="checkbox" name="monde"/> <label for="monde">Tout le monde (mineurs et majeurs)</label>
+                                <input type="radio" name="droits" id="monde"/> <label for="monde">Tout le monde (mineurs et majeurs)</label>
                             </div>
                         </div>
 
-                        <h3>Caractéristiques</h3>
+                        <h3>Caractéristiques:</h3>
 
-                        <div id="type_evenement">
-                            <h5>Le(s) type(s) d'évènement(s):</h5>
+                        <div class="type_evenement">
+                            <h5>Le(s) type(s) d'évènement(s)</h5>
                              <div class="boutons">
                                 <input id="bars_brasseries_cafes" type="button" name="bars_brasseries_cafes" value="Bars/Brasseries/Cafés">
                                 <input id="cinema" type="button" name="cinema" value="Cinéma">
@@ -70,8 +70,8 @@
                             </div>
                         </div>
 
-                        <div id="public_concerne">
-                            <h5>Le public concerné:</h5>
+                        <div class="public_concerne">
+                            <h5>Le public concerné</h5>
                             <div class="boutons">
                                 <input id="enfants" type="button" name="enfants" value="Enfants">
                                 <input id="filles" type="button" name="filles" value="Filles">
@@ -87,9 +87,9 @@
                                 <input id="seniors" type="button" name="seniors" value="Séniors">
                             </div>
                         </div>
-
-                        <div id="suivant">
-                            <a href="creer2.php">Suivant</a>
+                        </form>
+                        <div class="suivant">
+                            <a href="creer2.php?type_acces=""&amp;droit_acces=""&amp;type_evenement=""&amp;public_concerne=""">Suivant</a>
                         </div>
                 </fieldset>
             </section>
