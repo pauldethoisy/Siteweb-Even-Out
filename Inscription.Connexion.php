@@ -3,11 +3,13 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="Inscription_Connexion.css"/>
         <title> Even'Out</title>
     </head>
     
     <body>
+        
+        
         <nav>
             <ul id="menu"> <!-- en tete  -->
                 <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li>
@@ -19,6 +21,8 @@
         </nav>
         
         <header class ="fond">
+            
+            
              <!-- photo du site -->
         
                 <img id="paris" src="paris.jpg" width="1223" height="450">
@@ -46,19 +50,39 @@
             <section class="Conect">   <h1>Connexion</h1>
                         <form method="post" action="traitement.php">
                            <p><br/><br/>
- <label>Adresse mail</label> : <input type="email" name="adresse mail" id required />
+                            
+                            <div class="Mailco" > 
+                                
+                            <label>Adresse mail</label> : <input type="email" name="adresse mail" id required />        
+                            </div>
+                            
                            </p>
                             
                            <p>
+                               
+                           <div class="Mdp" > 
+                               
         <label>Mot de passe</label> : <input type="text" name="mot de passe" id required />
+                               
+                           </div>  
                            </p>
+                
                             
-                           <p>Rester connecté <input type="radio" name="restr connecté" value="restr connecté" id="restr connecté" />
+                           <p>
+                               
+                           <div class="Rc" > Rester connecté <input type="radio" name="restr connecté" value="restr connecté" id="restr connecté" />
+                               
+                           </div>
                            </p>
     
+                            <p>
+                              <br/>
+                             <div class="envoyerco">   <input type="submit" value="Connexion" /></div>
+                           
+                            </p>
                          </form>
         
-                     <h2><input type="submit" value="Connexion" /></h2>
+                    
         
         </section>
         <section class= "Inscrip"> <h1>Inscription</h1>
@@ -210,8 +234,15 @@
                   </p>
                       
                  
+    
+    
+              <p>
+                  
+                <br/>
             
-            
+<div class="envoyerins" >  <input type="submit" value="Connexion" /></div>
+
+            </p>
             
             
             
