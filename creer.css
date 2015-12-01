@@ -95,6 +95,7 @@ legend
 
 h1
 {
+  display: inline-block;
   font-size: 38px;
 }
 
@@ -126,13 +127,13 @@ h5
     text-decoration: underline;
 }
 
-#icone1, #information
+.icone
 {
   float: left;
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
-.bouton3, .bouton4, .bouton5
+.bouton3, .bouton4
 {
   margin-left: 20%;
 }
@@ -222,6 +223,12 @@ h5
     width: 135px;
 }
 
+.choisir_fichier
+{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 40%;
+}
 /* Bouton envoyer le formulaire*/
 .bouton_envoi
 {

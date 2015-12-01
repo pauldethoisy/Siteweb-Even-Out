@@ -19,443 +19,574 @@
                     <fieldset>  
                         <legend> Créer un évènement </legend>
                         
-                        <img src="Icones/information.png" id="information" alt="Informations"/><br/>
-                        <h1>Informations</h1>
+                        <h2>Déterminez:</h2>
                         
-                        <form method="post" action="apercu.php">
-                            <h2>Remplissez:</h2>
+                        <form method="get" action="apercu2.php">
                             
-                            <h3>L'évènement:</h3>
+                            <div class="parametrages">
+                                <img src="Icones/parametres.png" class="icone" alt="Accessibilité"/><br/>
+                                <h1>Paramétrages</h1>
 
-                            <div class="nom_evenement">
-                                <h5>Nom</h5>
-                                <div class="label">
-                                    <label for="nom">Nom de l'évènement:<strong><abbr title="obligatoire">*</abbr></strong></label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="nom" id="nom" placeholder="Ex: Marathon de Paris" size="30" autofocus required/>
-                                </div>
-                            </div>
+                                <h3>Accessibilité:</h3>
 
-                            <div class="date">
-                                <h5>Date</h5>
-                                <div class="bouton1">
-                                    <input type="checkbox" name="date_debut" id="date_debut" checked required/><label for="date_debut"> De début<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="input">
-                                    (Calendrier à coder)
-                                </div>
-                                <div class="bouton2">
-                                    <input type="checkbox" name="date_fin" id="date_fin"/><label for="date_fin"> De fin:</label>
-                                </div>
-                                <div class="input">
-                                    (Calendrier à coder)
-                                </div>
-                            </div>
-
-                            <div class="heure">
-                                <h5>Heure</h5>
-
-                                <div class="bouton1">
-                                    <input type="checkbox" name"heure_debut" id="heure_debut" checked required/><label for="heure_debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
-                                </div>
-                                <div class="select">
-                                    <select name="heures1" id="heures1">
-                                    <option value="00">00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                    </select>
-                                    h
-                                    <select name="minutes1" id="minutes1">
-                                        <option value="00">00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                        <option value="32">32</option>
-                                        <option value="33">33</option>
-                                        <option value="34">34</option>
-                                        <option value="35">35</option>
-                                        <option value="36">36</option>
-                                        <option value="37">37</option>
-                                        <option value="38">38</option>
-                                        <option value="39">39</option>
-                                        <option value="40">40</option>
-                                        <option value="41">41</option>
-                                        <option value="42">42</option>
-                                        <option value="43">43</option>
-                                        <option value="44">44</option>
-                                        <option value="45">45</option>
-                                        <option value="46">46</option>
-                                        <option value="47">47</option>
-                                        <option value="48">48</option>
-                                        <option value="49">49</option>
-                                        <option value="50">50</option>
-                                        <option value="51">51</option>
-                                        <option value="52">52</option>
-                                        <option value="53">53</option>
-                                        <option value="54">54</option>
-                                        <option value="55">55</option>
-                                        <option value="56">56</option>
-                                        <option value="57">57</option>
-                                        <option value="58">58</option>
-                                        <option value="59">59</option>
-                                    </select>
-                                    min
-                                </div>
-                                <div class="bouton2">
-                                    <input type="checkbox" name="heure_fin" id="heure_fin"/><label for="heure_fin"> De fin:</label>
-                                </div>
-                                <div class="select">
-                                    <select name="heures2" id="heures2">
-                                        <option value="00">00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                    </select>
-                                    h
-                                    <select name="minutes2" id="minutes2">
-                                        <option value="00">00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                        <option value="32">32</option>
-                                        <option value="33">33</option>
-                                        <option value="34">34</option>
-                                        <option value="35">35</option>
-                                        <option value="36">36</option>
-                                        <option value="37">37</option>
-                                        <option value="38">38</option>
-                                        <option value="39">39</option>
-                                        <option value="40">40</option>
-                                        <option value="41">41</option>
-                                        <option value="42">42</option>
-                                        <option value="43">43</option>
-                                        <option value="44">44</option>
-                                        <option value="45">45</option>
-                                        <option value="46">46</option>
-                                        <option value="47">47</option>
-                                        <option value="48">48</option>
-                                        <option value="49">49</option>
-                                        <option value="50">50</option>
-                                        <option value="51">51</option>
-                                        <option value="52">52</option>
-                                        <option value="53">53</option>
-                                        <option value="54">54</option>
-                                        <option value="55">55</option>
-                                        <option value="56">56</option>
-                                        <option value="57">57</option>
-                                        <option value="58">58</option>
-                                        <option value="59">59</option>
-                                    </select>
-                                    min
-                                </div>
-                            </div>
-
-                            <div class="concerne">
-                                <h5>Public concerné</h5>
-                                <div class="label">
-                                    <label for="age_min">Age minimum<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="age_min" id="age_min" maxlenght="3" placeholder="Ex: 18" required/><label for="age_min"> ans</label>
-                                </div>
-                                <div class="label">
-                                    <label for="age_max">Age maximum:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="age_max" id="age_max" maxlenght="3" placeholder="Ex: 122"/><label for="age_max"> ans</label>
-                                </div>
-                            </div>
-
-                            <div class="description_evenement">
-                                <h5>Description<strong><abbr title="obligatoire">*</abbr></strong></h5>
-                                <div class="textarea">
-                                    <textarea id="description" name="description" required>A propos de l'organisation de l'évènement :</textarea>
-                                </div>
-                            </div>
-
-                            <h3>Le lieu:</h3>
-
-                            <div class="types_lieux">
-                                <div class="label">
-                                    <label for="type_lieu">Type de lieu<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="select">
-                                    <select name="type_lieu" id="type_lieu">
-                                        <option selected>Choisir</option>
-                                        <option value="salle">Salle</option>
-                                        <option value="scene">Scène</option>
-                                        <option value="terrain">Terrain</option>
-                                        <option value="parc/jardin">Parc/Jardin</option>
-                                        <option value="foret">Forêt</option>
-                                        <option value="rue">Rue</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="noms_lieux">
-                                <div class="label">
-                                    <label for="nom_lieu">Nom du lieu:<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="nom_lieu" id="nom_lieu" placeholder="Ex: Rues de Paris" size="30" required/>
-                                </div>
-                            </div>
-
-                            <div class="adresse_lieu">
-                                <h5>Adresse du lieu</h5>
-                                <div class="label">
-                                    <label for="numero_adresse">Numéro d'adresse:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="numero_adresse" id="numero_adresse" maxlenght="7" placeholder="Ex: 1" size="30"/>
-                                </div>
-                                <div class="label">
-                                    <label for="adresse">Adresse<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="adresse" id="adresse" placeholder="Ex: Place de l'opéra" size="30" required/>
-                                </div>
-                                <div class="label">
-                                    <label for="code_postal">Code postal<strong><abbr title="obligatoire">*</abbr></strong>:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="code_postal" id="code_postal" maxlenght="5" placeholder="Ex: 75009" size="30" required/>
-                                </div>
-                            </div>
-
-                            <div class="participants">
-                                <h5>Capacité d'acceuil</h5>
-                                <div class="label">
-                                    <label for="nb_participants_max">Nombre maximum de participants:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="number" name="nb_participants_max" id="nb_participants_max" step="1" min="0" max="100000000"/>
-                                </div>
-                            </div>
-
-                            <h3>Les Tarifs:</h3>
-
-
-                            <div class="vendeurs">
-                                <h5>Vendeurs partenaires</h5>
-                                <div class="label">
-                                    <label for="nb_vendeurs">Nombre de vendeurs: </label>
-                                </div>
-                                <div class="input">
-                                    <input type="number" name="nb_vendeurs" id="nb_vendeurs" min="0" max="9"/>
-                                </div>
-                                <div class="label">
-                                    <label for="noms_vendeurs">Noms des vendeurs: </label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="noms_vendeurs" id="noms_vendeurs" placeholder="Ex: Vendeur 1, Vendeur 2, ..." size="30"/>
-                                </div>
-                                <div class="label">
-                                    <label for="url_sites_vendeurs">Sites web vendeurs: </label>
-                                </div>
-                                <div class="input">
-                                    <input type="url" name="url_sites_vendeurs" id="url_sites_vendeurs" placeholder="Ex: www.sitefactice.fr"/>
-                                </div>
-                            </div>
-
-                            <div class="types_prix">
-                                <h5>Type de prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
-                                <div class="bouton4">
-                                    <input type="radio" name="type_prix" id="gratuit" checked/><label for="gratuit"> Gratuit</label>
-                                </div>
-                                <div class="bouton5">
-                                    <input type="radio" name="type_prix" id="payant"/><label for="payant"> Payant</label>
-                                </div>
-                            </div>
-
-                            <div class="prix">
-                                <h5>Prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
-                                <div class="label">
-                                    <label for="prix_faible">Prix faible:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="prix_faible" id="faible" maxlenght="6" placeholder="Ex: 60"/><label for="prix_faible"> €</label>
-                                </div>
-                                <div class="textarea2">
-                                    <textarea id="faible_description" name="prix_faible_description">Description du tarif:
-(Ex: A partir de 18 ans.)
-                                    </textarea>
-                                </div>
-                                <div class="label">
-                                    <label for="prix_fort">Prix fort:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="text" name="prix_fort" id="prix_fort" maxlenght="6" placeholder="Ex: 40"/><label for="prix_fort"> €</label>
-                                </div>
-                                <div class="textarea2">
-                                    <textarea id="fort_description" name="prix_fort_description">Description du tarif:
-(Ex: Jusqu'à 18 ans.)
-                                    </textarea>
-                                </div>
-                            </div>
-
-                            <h3>La galerie:</h3>
-
-                            <div class="images">
-                                <h5>Images</h5>
-                                <div class="label">
-                                    <label for="galerie_image">Insérer une image:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="file" name="galerie_image" id="galerie_image"/>
-                                </div>
-                                <div class="label2">
-                                    <label for="galerie_image">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
-                                </div>
-                            </div>
-
-                            <div class="videos">
-                                <h5>Vidéos</h5>
-                                <div class="label">
-                                    <label for="galerie_video">Insérer une vidéo:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="file" name="galerie_video" id="galerie_video"/>
-                                </div>
-                                <div class="label2">
-                                    <label for="galerie_video">(formats .AVI, .MOV, .MP4, .MPEG ou .WMV)</label>
-                                </div>
-                            </div>
-
-                            <div class="musiques">
-                                <h5>Musiques</h5>
-                                <div class="label">
-                                    <label for="galerie_musique">Insérer une musique:</label>
-                                </div>
-                                <div class="input">
-                                    <input type="file" name="galerie_musique" id="galerie_musique"/>
-                                </div>
-                                <div class="label2">
-                                    <label for="galerie_musique">(formats .MP3, .ACC, .WMA, ou .OGG)</label>
+                                <div class="type_acces">
+                                    <h5>Le type d'accès</h5>
+                                    <div class="bouton3">
+                                        <input type="radio" name="acces" id="public" value="public" autofocus/> <label for="public">Évènement public (accessible par tout le monde)</label>
+                                    </div>
+                                    <div class="bouton4">
+                                    <input type="radio" name="acces" id="prive" value="prive"/> <label for="prive">Évènement privé (accessible aux utilisateurs invités uniquement)</label>
+                                    </div>
                                 </div>
                             </div>
                             
-                            <h3>Les sponsors:</h3>
-
-                            <div class="sponsors">
-                                <h5>Noms</h5>
-                                <div class="label">
-                                    <label for="noms_sponsors">Noms des sponsors:</label>
+                            <div class="informations">
+                                <img src="Icones/information.png" class="icone" alt="Informations"/><br/>
+                                <h1>Informations</h1>
+                                <h3>L'évènement:</h3>
+                                <div class="type_evenement">
+                                    <h5>Le(s) type(s) d'évènement(s)</h5>
+                                     <div class="boutons">
+                                        <input id="bars_brasseries_cafes" type="button" name="bars_brasseries_cafes" value="Bars/Brasseries/Cafés">
+                                        <input id="cinema" type="button" name="cinema" value="Cinéma">
+                                        <input id="clubbing" type="button" name="clubbing" value="Clubbing">
+                                        <input id="conferences_colloqiums" type="button" name="conferences_colloqiums" value="Conferences/Colloqiums">
+                                        <input id="enfants_familles" type="button" name="enfants_familles" value="Enfants/Familles">
+                                        <input id="festivals" type="button" name="festivals" value="Festivals">
+                                        <input id="marches_brocantes" type="button" name="marches_brocantes" value="Marchés/Brocantes">
+                                        <input id="mode_shopping" type="button" name="mode_shopping" value="Mode/Shopping">
+                                        <input id="pique-niques" type="button" name="pique-niques" value="Pique-niques">
+                                        <input id="restaurants" type="button" name="restaurants" value="Restaurants">
+                                        <input id="salons_expositions" type="button" name="salons_expositions" value="Salons/Expositions">
+                                        <input id="scenes" type="button" name="scenes" value="Scènes">
+                                        <input id="soirees" type="button" name="soirees" value="Soirées">
+                                        <input id="sports" type="button" name="sports" value="Sports">
+                                        <input id="visites" type="button" name="visites" value="Visites">
+                                    </div>
                                 </div>
-                                <div class="input">
-                                    <input type="text" name="noms_sponsors" id="noms_sponsors" placeholder="Ex: Sponsor 1, Sponsor 2, ..." size="30"/>
+                                <div class="nom_evenement">
+                                    <h5>Nom</h5>
+                                    <div class="label">
+                                        <label for="nom">Nom de l'évènement:<strong><abbr title="obligatoire">*</abbr></strong></label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="nom" id="nom" placeholder="Ex: Marathon de Paris" size="30" autofocus required/>
+                                    </div>
+                                </div>
+                                <div class="date">
+                                    <h5>Date</h5>
+                                    <div class="bouton1">
+                                        <input type="checkbox" name="date_debut" id="date_debut" checked required/><label for="date_debut"> De début<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="input">
+                                        (Calendrier à coder)
+                                    </div>
+                                    <div class="bouton2">
+                                        <input type="checkbox" name="date_fin" id="date_fin"/><label for="date_fin"> De fin:</label>
+                                    </div>
+                                    <div class="input">
+                                        (Calendrier à coder)
+                                    </div>
+                                </div>
+                                <div class="heure">
+                                    <h5>Heure</h5>
+                                    <div class="bouton1">
+                                        <input type="checkbox" name"heure_debut" id="heure_debut" checked required/><label for="heure_debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
+                                    </div>
+                                    <div class="select">
+                                        <select name="heures1" id="heures1">
+                                        <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                        h
+                                        <select name="minutes1" id="minutes1">
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                        </select>
+                                        min
+                                    </div>
+                                    <div class="bouton2">
+                                        <input type="checkbox" name="heure_fin" id="heure_fin"/><label for="heure_fin"> De fin:</label>
+                                    </div>
+                                    <div class="select">
+                                        <select name="heures2" id="heures2">
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                        h
+                                        <select name="minutes2" id="minutes2">
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                        </select>
+                                        min
+                                    </div>
+                                </div>
+                                <div class="description_evenement">
+                                    <h5>Description<strong><abbr title="obligatoire">*</abbr></strong></h5>
+                                    <div class="textarea">
+                                        <textarea id="description" name="description" required>A propos de l'organisation de l'évènement :</textarea>
+                                    </div>
+                                </div>
+                                <div class="photo_principale">
+                                    <h5>Photo principale de l'évènement</h5>
+                                    <p>Cette photo s'affichera en haut de la page de votre évènement.</p>
+                                    <div class="label">
+                                        <label for="url_photo_principale">Insérez une photo ou une image:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="file" name="url_photo_principale" id="url_photo_principale"/>
+                                    </div>
+                                    <div class="label2">
+                                        <label for="url_photo_principale">(formats: .JPG, .JPEG, ou .PNG)</label>
+                                    </div>
+                                </div>
+                                <div class="site_officiel">
+                                    <h5>Siteweb de l'évènement</h5>
+                                    <div class="label">
+                                        <label for="url_site_evenement">Site officiel: </label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="url" name="url_site_evenement" id="url_site_evenement" placeholder="Ex: www.sitefactice.fr"/>
+                                    </div>
+                                </div>
+                                <div class="email_evenement">
+                                    <h5>Email officiel</h5>
+                                    <div class="label">
+                                        <label for="url_email_evenement">Email de l'évènement: </label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="url" name="url_email_evenement" id="url_email_evenement" placeholder="Ex: prenom.nom@exemple.com"/>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="public_concerne">
+                                <img src="Icones/publics.png" class="icone" alt="Public concerné"/><br/>
+                                <h1>Clientèle ciblée</h1>
+                                <h3>Le public concerné:</h3>
+                                <div class="droit_acces">
+                                    <h5>Droit d'accès</h5>
+                                    <div class="bouton3">
+                                        <input type="radio" name="droits" id="majeurs"/> <label for="majeurs">Majeurs uniquement</label>
+                                    </div>
+                                    <div class="bouton4">
+                                        <input type="radio" name="droits" id="monde"/> <label for="monde">Tout le monde (mineurs et majeurs)</label>
+                                    </div>
+                                </div>
+                                <div class="type_public">
+                                    <h5>Type de public</h5>
+                                    <div class="boutons">
+                                        <input id="enfants" type="button" name="enfants" value="Enfants">
+                                        <input id="filles" type="button" name="filles" value="Filles">
+                                        <input id="garcons" type="button" name="garcons" value="Garçons">
+                                        <input id="adolescents" type="button" name="adolescents" value="Adolescents">
+                                        <input id="jeunes" type="button" name="jeunes" value="Jeunes">
+                                        <input id="etudiants" type="button" name="etudiants" value="Étudiants">
+                                        <input id="femmes" type="button" name="femmes" value="Femmes">
+                                        <input id="hommes" type="button" name="hommes" value="Hommes">
+                                        <input id="adultes" type="button" name="adultes" value="Adultes">
+                                        <input id="actifs" type="button" name="actifs" value="Actifs">
+                                        <input id="retraites" type="button" name="retraites" value="Retraités">
+                                        <input id="seniors" type="button" name="seniors" value="Séniors">
+                                    </div>
+                                </div>
+                                <div class="droit_acces">
+                                    <h5>Tranche d'âge</h5>
+                                    <div class="label">
+                                        <label for="age_min">Age minimum<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="age_min" id="age_min" maxlenght="3" placeholder="Ex: 18" required/><label for="age_min"> ans</label>
+                                    </div>
+                                    <div class="label">
+                                        <label for="age_max">Age maximum:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="age_max" id="age_max" maxlenght="3" placeholder="Ex: 122"/><label for="age_max"> ans</label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="image_sponsor">
-                                <h5>Logos</h5>
-                                <div class="label">
-                                    <label for="logos_sponsors">Insérer un logo:</label>
+                            <div class="localisation">
+                                <img src="Icones/localisation.png" class="icone" alt="Localisation"/><br/>
+                                <h1>Situer l'évènement</h1>
+                                <h3>Le lieu:</h3>
+                                <div class="types_lieux">
+                                    <div class="label">
+                                        <label for="type_lieu">Type de lieu<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="select">
+                                        <select name="type_lieu" id="type_lieu">
+                                            <option selected>Choisir</option>
+                                            <option value="salle">Salle</option>
+                                            <option value="scene">Scène</option>
+                                            <option value="terrain">Terrain</option>
+                                            <option value="parc/jardin">Parc/Jardin</option>
+                                            <option value="foret">Forêt</option>
+                                            <option value="rue">Rue</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="input">
-                                    <input type="file" name="logos_sponsors" id="logos_sponsors"/>
+
+                                <div class="noms_lieux">
+                                    <div class="label">
+                                        <label for="nom_lieu">Nom du lieu:<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="nom_lieu" id="nom_lieu" placeholder="Ex: Rues de Paris" size="30" required/>
+                                    </div>
                                 </div>
-                                <div class="label2">
-                                    <label for="logos_sponsors">(formats .JPG, .JPEG, .PNG ou .GIF)</label>
+
+                                <div class="adresse_lieu">
+                                    <h5>Adresse du lieu</h5>
+                                    <div class="label">
+                                        <label for="numero_adresse">Numéro d'adresse:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="numero_adresse" id="numero_adresse" maxlenght="7" placeholder="Ex: 1" size="30"/>
+                                    </div>
+                                    <div class="label">
+                                        <label for="adresse">Adresse<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="adresse" id="adresse" placeholder="Ex: Place de l'opéra" size="30" required/>
+                                    </div>
+                                    <div class="label">
+                                        <label for="code_postal">Code postal<strong><abbr title="obligatoire">*</abbr></strong>:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="code_postal" id="code_postal" maxlenght="5" placeholder="Ex: 75009" size="30" required/>
+                                    </div>
                                 </div>
+
+                                <div class="participants">
+                                    <h5>Capacité d'acceuil</h5>
+                                    <div class="label">
+                                        <label for="nb_participants_max">Nombre maximum de participants:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="number" name="nb_participants_max" id="nb_participants_max" step="1" min="0" max="100000000"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vente">
+                                <img src="Icones/vendeurs.png" class="icone" alt="Vendeurs"/>
+                                <h1>Différentes tarifications</h1>
+                                <h3>Les ventes:</h3>
+                                <div class="vendeurs">
+                                    <h5>Vendeurs partenaires</h5>
+                                    <div class="label">
+                                        <label for="nb_vendeurs">Nombre de vendeurs: </label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="number" name="nb_vendeurs" id="nb_vendeurs" min="0" max="9"/>
+                                    </div>
+                                    <div class="label">
+                                        <label for="noms_vendeurs">Noms des vendeurs: </label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="noms_vendeurs" id="noms_vendeurs" placeholder="Ex: Vendeur 1, Vendeur 2, ..." size="30"/>
+                                    </div>
+                                    <div class="label">
+                                        <label for="url_sites_vendeurs">Sites web vendeurs: </label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="url" name="url_sites_vendeurs" id="url_sites_vendeurs" placeholder="Ex: www.sitefactice.fr"/>
+                                    </div>
+                                    <div class="images_vendeurs">
+                                        <h5>Logos</h5>
+                                        <div class="label">
+                                            <label for="url_logos_vendeurs">Insérez un logo:</label>
+                                        </div>
+                                        <div class="input">
+                                            <input type="file" name="url_logos_vendeurs" id="url_logos_vendeurs"/>
+                                        </div>
+                                        <div class="label2">
+                                            <label for="url_logos_vendeurs">(formats: .JPG, .JPEG, .PNG ou .GIF)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="types_prix">
+                                    <h5>Type de prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
+                                    <div class="bouton4">
+                                        <input type="radio" name="type_prix" id="gratuit" checked/><label for="gratuit"> Gratuit</label>
+                                    </div>
+                                    <div class="bouton5">
+                                        <input type="radio" name="type_prix" id="payant"/><label for="payant"> Payant</label>
+                                    </div>
+                                </div>
+
+                                <div class="prix">
+                                    <h5>Prix<strong><abbr title="obligatoire">*</abbr></strong></h5>
+                                    <div class="label">
+                                        <label for="prix_faible">Prix faible:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="prix_faible" id="faible" maxlenght="6" placeholder="Ex: 60"/><label for="prix_faible"> €</label>
+                                    </div>
+                                    <div class="textarea2">
+                                        <textarea id="faible_description" name="prix_faible_description">Description du tarif:
+    (Ex: A partir de 18 ans.)
+                                        </textarea>
+                                    </div>
+                                    <div class="label">
+                                        <label for="prix_fort">Prix fort:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="prix_fort" id="prix_fort" maxlenght="6" placeholder="Ex: 40"/><label for="prix_fort"> €</label>
+                                    </div>
+                                    <div class="textarea2">
+                                        <textarea id="fort_description" name="prix_fort_description">Description du tarif:
+    (Ex: Jusqu'à 18 ans.)
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="galerie">
+                                <img src="Icones/galerie.png" class="icone" alt="Galerie multimédias"/><br/>
+                                <h1>Galerie multimédias</h1>
+                                <h3>La galerie photos:</h3>
+                                <div class="images">
+                                    <h5>Insérez une photo ou une image</h5>
+                                    <div class="label">
+                                        <label for="url_galerie_image">Formats acceptés: .JPG, .JPEG, .PNG ou .GIF</label>
+                                    </div>
+                                    <div class="choisir_fichier">
+                                        <input type="file" name="url_galerie_image" id="url_galerie_image"/>
+                                    </div>
+                                </div>
+                                <h3>La galerie vidéos:</h3>
+                                <div class="videos">
+                                    <h5>Insérez une vidéo</h5>
+                                    <div class="label">
+                                        <label for="url_galerie_video">Formats acceptés: .AVI, .MOV, .MP4, .MPEG ou .WMV</label>
+                                    </div>
+                                    <div class="choisir_fichier">
+                                        <input type="file" name="url_galerie_video" id="url_galerie_video"/>
+                                    </div>
+                                </div>
+                                <h3>La galerie de musiques:</h3>
+                                <div class="musiques">
+                                    <h5>Insérez une musique</h5>
+                                    <div class="label">
+                                        <label for="url_galerie_musique">Formats acceptés: .MP3, .ACC, .WMA, ou .OGG</label>
+                                    </div>
+                                    <div class="choisir_fichier">
+                                        <input type="file" name="url_galerie_musique" id="url_galerie_musique"/>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="galerie">
+                                <img src="Icones/partenaires.png" class="icone" alt="Partrenaires"/>
+                                <h1>Collaboration:<br/>Organisateurs et sponsors</h1>
+                                <h3>Les organisateurs:</h3>
+                                <div class="sponsors">
+                                    <h5>Noms</h5>
+                                    <div class="label">
+                                        <label for="noms_organisateurs">Noms des organisateurs:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="noms_organisateurs" id="noms_organisateurs" placeholder="Ex: Organisateur 1, Organisateur 2, ..." size="30"/>
+                                    </div>
+                                </div>
+                                <div class="image_organisateur">
+                                    <h5>Logos</h5>
+                                    <div class="label">
+                                        <label for="url_logos_organisateurs">Insérez un logo:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="file" name="url_logos_organisateurs" id="url_logos_sponsors"/>
+                                    </div>
+                                    <div class="label2">
+                                        <label for="url_logos_organisateurs">(formats: .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    </div>
+                                </div>
+                                <h3>Les sponsors:</h3>
+                                <div class="sponsors">
+                                    <h5>Noms</h5>
+                                    <div class="label">
+                                        <label for="noms_sponsors">Noms des sponsors:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" name="noms_sponsors" id="noms_sponsors" placeholder="Ex: Sponsor 1, Sponsor 2, ..." size="30"/>
+                                    </div>
+                                </div>
+                                <div class="image_sponsor">
+                                    <h5>Logos</h5>
+                                    <div class="label">
+                                        <label for="url_logos_sponsors">Insérez un logo:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="file" name="url_logos_sponsors" id="url_logos_sponsors"/>
+                                    </div>
+                                    <div class="label2">
+                                        <label for="url_logos_sponsors">(formats: .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="bouton_envoi">
                                 <input type="submit" value="Envoyer" name="envoyer "class="envoyer">

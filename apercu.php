@@ -149,7 +149,7 @@ function select_one_accessibilite($id) {
                             }
                             mysqli_free_result($result);
                     ?>
-
+ 
                         <a href="index2.php?action=modifier">modifier</a>
                         
                     <?php 

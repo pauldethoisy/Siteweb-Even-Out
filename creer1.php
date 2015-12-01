@@ -20,7 +20,7 @@
                         <p><img src="Icones/parametres.png" id="icone1" alt="Accessibilité"/></p>
                         <p><br/><h1>Paramétrages</h1></p>
                         
-                        <form method="get" action="traitement.php">
+                        <form method="post" action="traitement.php">
                         <h2>Sélectionnez:</h2>
 
                         <h3>Accessibilité:</h3>
@@ -28,10 +28,10 @@
                         <div class="type_acces">
                             <h5>Le type d'accès</h5>
                             <div class="bouton3">
-                                <input type="radio" name="acces" id="public"/> <label for="public">Accès public (tout le monde)</label>
+                                <input type="radio" name="acces" id="public" value="public"/> <label for="public">Évènement public (accessible par tout le monde)</label>
                             </div>
                             <div class="bouton4">
-                            <input type="radio" name="acces" id="prive"/> <label for="prive">Accès privé (utilisateurs invités uniquement)</label>
+                            <input type="radio" name="acces" id="prive" value="prive"/> <label for="prive">Évènement privé (accessible aux utilisateurs invités uniquement)</label>
                             </div>
                         </div>
                         <div class="droit_acces">
@@ -40,9 +40,6 @@
                                 <input type="radio" name="droits" id="majeurs"/> <label for="majeurs">Majeurs uniquement</label>
                             </div>
                             <div class="bouton4">
-                                <input type="radio" name="droits" id="mineurs"/> <label for="mineurs">Mineurs uniquement</label>
-                            </div>
-                            <div class="bouton5">
                                 <input type="radio" name="droits" id="monde"/> <label for="monde">Tout le monde (mineurs et majeurs)</label>
                             </div>
                         </div>
