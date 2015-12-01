@@ -485,38 +485,35 @@ function select_one_event($id) {
                             <div class="vente">
                                 <img src="Icones/vendeurs.png" class="icone" alt="Vendeurs"/>
                                 <h1>Différentes tarifications</h1>
-                                <h3>Les ventes:</h3>
+                                <h3>Présentation du vendeur principal et de ses prix:</h3>
                                 <div class="vendeurs">
-                                    <h5>Vendeurs partenaires</h5>
-                                    <div class="label">
-                                        <label for="nb_vendeurs">Nombre de vendeurs: </label>
-                                    </div>
-                                    <div class="input">
-                                        <input type="number" name="nb_vendeurs" id="nb_vendeurs" min="0" max="9"/>
+                                    <h5>Vendeur partenaire</h5>
+                                    <div class="info">
+                                        <p>Pour plus de vendeurs, allez sur le site e l'évènement</p>
                                     </div>
                                     <div class="label">
-                                        <label for="noms_vendeurs">Noms des vendeurs: </label>
+                                    <label for="nom_vendeur_principal">Noms du vendeur principal: </label>
                                     </div>
                                     <div class="input">
-                                        <input type="text" name="noms_vendeurs" id="noms_vendeurs" placeholder="Ex: Vendeur 1, Vendeur 2, ..." size="30"/>
+                                        <input type="text" name="nom_vendeur_principal" id="nom_vendeur_principal" placeholder="Ex: Fnac ... " size="30"/>
                                     </div>
                                     <div class="label">
-                                        <label for="url_sites_vendeurs">Sites web vendeurs: </label>
+                                        <label for="url_site_vendeur">Siteweb du vendeur: </label>
                                     </div>
                                     <div class="input">
-                                        <input type="url" name="url_sites_vendeurs" id="url_sites_vendeurs" placeholder="Ex: www.sitefactice.fr"/>
+                                        <input type="url" name="url_site_vendeur" id="url_site_vendeur" placeholder="Ex: www.sitefactice.fr"/>
                                     </div>
-                                    <div class="images_vendeurs">
-                                        <h5>Logos</h5>
-                                        <div class="label">
-                                            <label for="url_logos_vendeurs">Insérez un logo:</label>
-                                        </div>
-                                        <div class="input">
-                                            <input type="file" name="url_logos_vendeurs" id="url_logos_vendeurs"/>
-                                        </div>
-                                        <div class="label2">
-                                            <label for="url_logos_vendeurs">(formats: .JPG, .JPEG, .PNG ou .GIF)</label>
-                                        </div>
+                                    <div class="image_vendeur">
+                                    <h5>Logo</h5>
+                                    <div class="label">
+                                        <label for="url_logo_vendeur">Insérez un logo:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="file" name="url_logo_vendeur" id="url_logo_vendeur"/>
+                                    </div>
+                                    <div class="label2">
+                                        <label for="url_logo_vendeur">(format: .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="types_prix">

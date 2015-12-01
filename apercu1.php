@@ -135,9 +135,9 @@
 
                         <div class="vendeurs">
                             <h5>Vendeurs partenaires:</h5>
-                            <?php echo $_POST['nb_vendeurs']; ?>
-                            <?php echo $_POST['noms_vendeurs']; ?>
-                            <?php echo $_POST['sites_vendeurs']; ?>
+                            <?php echo $_POST['nom_vendeur_principal']; ?>
+                            <?php echo $_POST['site_vendeur']; ?>
+                            <?php echo $_POST['logo_vendeur']; ?>
                         </div>
 
                         <div class="types_prix">
