@@ -28,10 +28,10 @@
              
         
                 <img id="paris" src="paris.jpg" width="1223" height="450">
-                <img id="even" src="even.png" width="150" height="150"> -->
+                <img id="even" src="even.png" width="150" height="150"> 
                 
             
-        </header>
+        </header> -->
     
             
         
