@@ -7,8 +7,11 @@
         <title> Even'Out</title>
     </head>
      <body>
-         <nav>
-             <ul id="menu"> <!-- en tete  -->
+    <?php include("menu.php") ?>
+        
+    <?php include("en_tete.php") ?>
+         <!--<nav>
+             <ul id="menu"> 
                  <span class="evt">
                     <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li></span>
                     <li> <a href="agenda.html"> <h2> Agenda </h2> </a> </li> 
@@ -27,7 +30,7 @@
              
         <img id="paris" src="paris.jpg" width="1333" height="407">
                 
-    </header>
+    </header>-->
         
     <div id="searchbar">  <!-- Code pour la barre de recherche -->
                 
@@ -303,17 +306,18 @@
     </div>
            
     
-    <footer>
+    <?php include("PiedPage.php") ?>
+    <!--<footer>
                  
         
-        <ul id="fin"> <!-- en tete  -->
+        <ul id="fin"> 
             <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
             <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
             <li> <a href="#"> <h2>Contact</h2> </a></li>
             <li> <a href="#"> <h2>Aide en ligne </h2> </a> </li>
         </ul>
                 
-    </footer>
+    </footer>-->
 
 
     </body>
