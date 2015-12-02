@@ -595,4 +595,5 @@
             </section>
         </div>
     </body>
+    <?php include("PiedPage.php") ?>
 </html>
