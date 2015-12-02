@@ -19,7 +19,7 @@
         <li> <a href="forum.html"> <h2>Forum</h2> </a> </li>
         <li> <a href="mon_compte.html"> <h2> Mon compte</h2> </a> </li>
     </ul>
-</nav> -->
+</nav> 
         
                 
                 
@@ -28,13 +28,13 @@
         </nav>
         
         <header class ="fond">
-             <!-- photo du site -->
+            
         
                 <img id="paris" src="paris.jpg" width="1333" height="407">
                 
                 
             
-        </header>
+        </header> -->
     
             
         
