@@ -147,9 +147,10 @@
 </div>
 	
 	
-	<!-- Le bas de page-->
+	
+	 <?php include("PiedPage.php") ?>
 	 
-            <footer>
+            <!--<footer>
 			
                 <ul id="fin"> 
 				<link rel="stylesheet" href="V1.css" />
@@ -160,7 +161,7 @@
               
                 </ul>
             
-            </footer>  
+            </footer>--> 
 	    </body>
 </html>
   
