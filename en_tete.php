@@ -19,7 +19,7 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche-avancé.php"> recherche avancée</a>
+            <a href="recherche_avancee.php"> recherche avancée</a>
         </div>
             
  </header>
