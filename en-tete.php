@@ -9,6 +9,7 @@
                 <form action="search"  method="get" class="formulaire">
                     
                     <input id="search" type="text" placeholder="Rechercher un évènement"/>
+                    
                     <input id="search-btn" type="submit" value="rechercher"/>
                     
                      
@@ -16,7 +17,7 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche.html"> recherche avancée</a>
+            <a href="recherche.php"> recherche avancée</a>
         </div>
             
  </header>
