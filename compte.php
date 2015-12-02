@@ -10,7 +10,7 @@
     
     <body>
        <?php include("menu.php") ?>
-       <?php include("en-tete.php") ?>
+       <?php include("en_tete.php") ?>
     
     <form method="post" action="traitement.php">
             <p>
