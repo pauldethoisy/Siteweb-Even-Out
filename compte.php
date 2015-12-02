@@ -100,9 +100,9 @@
             <input type="submit" value="S'inscrire"/>
             </p>
         </form>
-    
+       <?php include("PiedPage.php") ?>
     </body>
     
-    <?php include("PiedPage.php") ?>
+ 
      
 </html> 
