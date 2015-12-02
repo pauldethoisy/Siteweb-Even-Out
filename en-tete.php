@@ -17,7 +17,7 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche.php"> recherche avancée</a>
+            <a href="recherche-avancé.php"> recherche avancée</a>
         </div>
             
  </header>
