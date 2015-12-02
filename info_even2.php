@@ -144,11 +144,12 @@
 
 <!-- FIN onglet descriptif et commentaires -->
 	 
-	 <!-- Le bas de page-->
 	 
-            <footer>
+	 <?php include("PiedPage.php") ?>
+	 
+            <!-- <footer>
 			
-                <ul id="fin"> <!-- en tete  -->
+                <ul id="fin"> 
 				<link rel="stylesheet" href="V1.css" />
                 <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
                 <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
@@ -157,6 +158,7 @@
               
                 </ul>
             
-            </footer>  
+            </footer>-->
+            
 	    </body>
 </html>
