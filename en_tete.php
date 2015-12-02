@@ -1,5 +1,6 @@
 <header class ="fond">
              <!-- photo du site -->
+             <link rel="stylesheet" href="en_tete.css" /> 
             
             <a href="#"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
