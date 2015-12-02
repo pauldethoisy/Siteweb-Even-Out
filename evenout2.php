@@ -148,9 +148,9 @@ Soyez organisé en organisant vos sorties et vos déplacements entre amis.</p>
             </fieldset>
             </section>
             
-	
-            <footer>
-                 <ul id="fin"> <!-- en tete  -->
+	<?php include("PiedPage.php") ?>
+            <!-- <footer>
+                 <ul id="fin"> 
                 <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
                 <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
                 <li> <a href="#"> <h2>Contact</h2> </a</li>
@@ -158,7 +158,7 @@ Soyez organisé en organisant vos sorties et vos déplacements entre amis.</p>
               
             </ul>
             
-            </footer>
+            </footer> -->
          
 
     
