@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
  <meta charset="utf-8">
 <nav>
     <ul id="menu"> <!-- en tete  -->
@@ -13,3 +17,4 @@
         </li>
     </ul>
 </nav>
+    </head>
