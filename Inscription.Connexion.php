@@ -8,10 +8,12 @@
     </head>
     
     <body>
+        <?php include("menu.php") ?>
         
+        <?php include("en-tete.php") ?>
         
-        <nav>
-            <ul id="menu"> <!-- en tete  -->
+       <!-- <nav>
+            <ul id="menu"> 
                 <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li>
                 <li> <a href="agenda.html"> <h2> Agenda </h2> </a> </li> 
                 <li> <a href="creer.html"> <h2>Créer un évènement</h2> </a></li>
@@ -23,10 +25,10 @@
         <header class ="fond">
             
             
-             <!-- photo du site -->
+             
         
                 <img id="paris" src="paris.jpg" width="1223" height="450">
-                <img id="even" src="even.png" width="150" height="150">
+                <img id="even" src="even.png" width="150" height="150"> -->
                 
             
         </header>
