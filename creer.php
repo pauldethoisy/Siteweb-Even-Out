@@ -594,6 +594,9 @@
                 </article>
             </section>
         </div>
+
+        <?php include("PiedPage.php") ?>
+        
     </body>
-    <?php include("PiedPage.php") ?>
+    
 </html>
