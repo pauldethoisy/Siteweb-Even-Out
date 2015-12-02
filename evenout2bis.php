@@ -10,7 +10,7 @@
     <body>
       
       <?php include("menu.php") ?>
-      <?php include("en-tete.php") ?>
+      <?php include("en_tete.php") ?>
         <!--  <nav>
     <ul id="menu"> 
         <span class="evt"><li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li></span>
