@@ -1,7 +1,5 @@
-
-<header class ="fond">
+ <header class ="fond">
              <!-- photo du site -->
-             
             
             <a href="#"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
@@ -11,7 +9,6 @@
                 <form action="search"  method="get" class="formulaire">
                     
                     <input id="search" type="text" placeholder="Rechercher un évènement"/>
-                    
                     <input id="search-btn" type="submit" value="rechercher"/>
                     
                      
@@ -19,7 +16,7 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche_avancee.php"> recherche avancée</a>
+            <a href="recherche.html"> recherche avancée</a>
         </div>
             
  </header>
