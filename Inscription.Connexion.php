@@ -50,7 +50,7 @@
         </div>
         
             <section class="Conect">   <h1>Connexion</h1>
-                        <form method="post" action="traitement.php">
+                        <form method="post" > <!-- action="traitement.php"> -->
                            <p><br/><br/>
                             
                             <div class="Mailco" > 
@@ -79,7 +79,8 @@
     
                             <p>
                               <br/>
-                             <div class="envoyerco">   <input type="submit" value="Connexion" /></div>
+                              <a href="page_accueil_co.php"> <div class="envoyerco">  <input type="submit" value="Connexion" /> 
+							 </div> </a>
                            
                             </p>
                          </form>
@@ -88,7 +89,7 @@
         
         </section>
         <section class= "Inscrip"> <h1>Inscription</h1>
-                  <form method="post"action="traitement.php">
+                  <form method="post" action="traitement.php"> 
                       
                       <p><br/> <div class="PSDO" >    <label>Pseudo :   </label>
                            <input type="text" name="pseudo" id required class="pseu" ></div>
@@ -242,7 +243,7 @@
                   
                 <br/>
             
-<div class="envoyerins" >  <input type="submit" value="Connexion" /></div>
+ <a href="page_accueil_co.php"> <div class="envoyerins" > <input type="submit" value="Connexion" />  </div> </a> 
 
             </p>
             
@@ -272,3 +273,4 @@
       
     </body>
 </html>
+  
