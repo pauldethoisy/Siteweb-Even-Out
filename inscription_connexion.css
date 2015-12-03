@@ -7,7 +7,7 @@ h1
 {
     font-size: 40px; /* Titres de 40 pixels */
     font-size: bold;
-    margin-left: 110px;
+    margin-left: 35px;
     
     
 }
@@ -18,12 +18,28 @@ h1
     background-color: #ea008a; /* Le fond de la page sera rose */
     color: black; /* Le texte de la page sera noir */
     float: left;
-    width: 33%;
-    height: 60%;
+    width: 480px;
+    height: 400px;
     position: absolute;
-    left: 10%;
-    top: 600px;
+    left: 120px;
+    top: 700px;
 }
+
+    
+.underco
+{
+    margin-top: 165px;
+    
+}
+
+.underins
+{
+    margin-top: 130px;
+    
+}
+
+
+
 
 .Inscrip
 {
@@ -32,10 +48,11 @@ h1
     color: black; /* Le texte de la page sera noir */
     float: right;
     position: absolute;
-    width: 33%;
-    right: 10%;
-    height: 60%;
-    top: 600px;
+    width: 480px;
+    right: 120px;
+    height: 400px;
+    top: 700px;
+
 }
 h2{
     margin: 5px;
@@ -71,44 +88,60 @@ nav
 /* marge des champs de formulaire pour les aligner */
 .pseu
 {
-  margin-left: 37px;
+  margin-left: 47px;
 }
-.mdp
+.mdp/*box, champ de texte mot de passe
+
+miniscule= champ */
 {
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
-.Conf
+.mailins
 {
-  margin-left: 11px;
+    margin-left: 10px;
+    
+}
+.conf
+{
+  margin-left: 10px;
 }
 .PSDO
 {
-  margin-left: 83px;
+  margin-left: 65px;
 }
 .Mail
 {
-  margin-left: 83px;
+  margin-left: 65px;
 }
 
-.Mailco
-{
-  margin-left: 83px;
-}
 
-.Mdp
+.MDP
 {
-  margin-left: 83px;
+  margin-left: 65px;
 }
 .Rc
 {
-  margin-left: 83px;
+  margin-left: 115px;
+}
+.Mailco
+{
+  margin-left: 115px;
+}
+.MDPCO
+{
+  margin-left: 115px;
 }
 
+.CONF
+{
+    margin-left: 65px;
+}
 
-
-
-
+.Naiss
+{
+    margin-left: 65px;
+}
 
 /*pour les boutons "connexion" */
 .envoyerco
@@ -119,47 +152,122 @@ nav
 
 .envoyerins
 {
-    margin-left: 100px;
+    margin-left: 180px;
 }
 
 
-.recherche
+
+.fi
 {
-    position: absolute;
-    margin-top: 370px;
-    margin-left: 750px;
-    color: red;
-   font-size: 16px;
+  margin-left: 250px;
+}
+
+.Lx, h1
+{
+   position:absolute;
+    left:100px;
+}
+
+
+
+#menu li
+{
+ 
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+    position: relative;
+    margin-right: 3%;
+   
+}
+
+.evt
+{
+    margin-left: 275px;
+}
+#menu a
+{
+    color: white;
+    text-decoration: none;
+}
+
+#menu
+{
+    border-width: 1px solid black;
+    background-color: black;
+   
     
 }
 
-.recherche a /* Liens par défaut (non survolés) */
-{
-   text-decoration: none;
-   color:yellow;
-  
-  
+
+#menu li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        top: -999em; /* Hop, on envoie loin du champ de vision */
 }
 
-.recherche a:hover /* Apparence au survol des liens */
+#menu li ul li /* Éléments de sous-listes */
 {
-   text-decoration: underline;
-   color: yellow;
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 0px solid black; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul li                
+{
+        border-top : 0px solid black; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu li ul 
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left     : 0px solid black ; /* Petite bordure à gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu li ul                 
+{
+        border-left : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */    
+{
+        color: #EA008A; /* On passe le texte en noir... */
+        background: black; /* ... et au contraire, le fond en blanc */
 }
 
 
+#menu li:hover ul , #menu li.sfhover ul  /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: 20em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
 
 
+#mn
+{
+    border-width: 1px solid black;
+    background-color: black;
+}
 
 .fond
 {
     position: absolute;
+    
 }
-
 
 #paris
 {
-  position: absolute;
+  position: relative;
+  margin-top:11.8%;
+  
   
 }
 
@@ -167,29 +275,143 @@ nav
 
 {
     position: absolute;
-    top:3px;
-    left:0px;
-}
-
-.search
-
-{
-    position: absolute
-    left: 60px;
+    top:-3px;
+    left:10px;
+    z-index: 5;
 }
 
 
 #searchbar
-{    position: absolute;
-    margin-top: 350px;
-    margin-left: 650px;
-    border-radius: 2em;
+{   position: absolute;
+    margin-left: 45%;
+    height: 80px;
+    z-index: 10;
+    margin-top: -550px;
     }
+
+
+#search
+{
+    border-radius: 2em;
+    width: 392px;
+    height: 34px;
+    border-style:solid;
+    border-width: 1px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    color: black;
+   
+}
+
+#search-btn{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: #EA008A;
+    margin-left: 76%;
+    margin-top: -90px;
+    
+}
+
+
+
+
+.recherche
+{
+    position: absolute;
+    margin-top: -485px;
+    margin-left: 889px;
+    font-size: 20px;
+    z-index: 5;
+    
+    
+}
+
+.recherche a /* Liens par défaut (non survolés) */
+{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+  
+  
+}
+
+.recherche a:hover /* Apparence au survol des liens */
+{
+   text-decoration: underline;
+   color: #EA008A;
+}
+body
+{
+    margin: xx auto ;
+    padding: 0;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.recherche
+{
+    position: absolute;
+    margin-top: -485px;
+    margin-left: 889px;
+    font-size: 20px;
+    z-index: 5;
+    
+    
+}
+
+.recherche a /* Liens par défaut (non survolés) */
+{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+  
+  
+}
+
+.recherche a:hover /* Apparence au survol des liens */
+{
+   text-decoration: underline;
+   color: #EA008A;
+}
+
+.titre1
+{
+    color: deeppink;
+    font-size: 17px;
+}
+
+#formulaire
+{
+    margin-top: 50%;
+    font-size: 100%;
+    display: inline-block;
+    text-align: justify;
+    color: black;
+    margin: xx auto ;
+    padding: 0;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#button
+{
+    margin-top: 23%;
+}
+
 footer
 {
-    border-width: 1% solid black;
+    border-width: 1px solid black;
     background-color: black;
-    margin-top: 100%;
+    margin-top: 1200px;
+    
 }
 
 #fin li
@@ -197,6 +419,7 @@ footer
     display: inline-block;
     font-size: 12px;
     color: white;
+    
 }
 
 
@@ -206,17 +429,8 @@ footer
   display: inline-block;
   margin-right: 40px;
   margin-left: 40px;
-    
      
 }
-
-body
-{
-    background-color:#aca8a8;
-
-}
-
-
 
 .fi
 {
