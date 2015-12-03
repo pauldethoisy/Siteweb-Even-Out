@@ -3,17 +3,15 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="inscription_connexion.css"/>
+        <link rel="stylesheet" href="Inscription_Connexion.css"/>
         <title> Even'Out</title>
     </head>
     
     <body>
-        <?php include("menu.php") ?>
         
-        <?php include("en_tete.php") ?>
         
-       <!-- <nav>
-            <ul id="menu"> 
+        <nav>
+            <ul id="menu"> <!-- en tete  -->
                 <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li>
                 <li> <a href="agenda.html"> <h2> Agenda </h2> </a> </li> 
                 <li> <a href="creer.html"> <h2>Créer un évènement</h2> </a></li>
@@ -22,49 +20,47 @@
             </ul>
         </nav>
         
-        <header class ="fond">
+     <header class ="fond">
+             <!-- photo du site -->
             
-            
-             
+            <a href="#"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
-                <img id="paris" src="paris.jpg" width="1223" height="450">
-                <img id="even" src="even.png" width="150" height="150"> 
-                
+                <img id="paris" src="image/paris.jpg" width="1200" height="440">
             
-        </header> -->
-    
-            
-        
-        <div id="searchbar">  <!-- Code pour la barre de recherche -->
-                <form action="" class="formulaire">
+              <div id="searchbar">  <!-- Code pour la barre de recherche -->
+                <form action="search"  method="get" class="formulaire">
                     
-                    <input class="champ" type="search" placeholder="mots-clefs"/>
-                    <input class="bouton" type="button" value="" />
+                    <input id="search" type="text" placeholder="Rechercher un évènement"/>
+                    <input id="search-btn" type="submit" value="rechercher"/>
+                    
                      
                 </form>
          </div>
-        
-        
-        <div class="recherche">
+            
+            <div class="recherche">
             <a href="recherche.html"> recherche avancée</a>
         </div>
+            
+ </header>
         
             <section class="Conect">   <h1>Connexion</h1>
-                        <form method="post" > <!-- action="traitement.php"> -->
-                           <p><br/><br/>
+                        <form method="post" action="traitement.php">
+                            
+            <div class="underco">
+                          
                             
                             <div class="Mailco" > 
                                 
-                            <label>Adresse mail</label> : <input type="email" name="adresse mail" id required />        
+                            <label>Adresse mail</label> : <input type="email" name="adresse_mail" id required />        
                             </div>
                             
-                           </p>
+                        
                             
                            <p>
                                
-                           <div class="Mdp" > 
+                           <div class="MDPCO" > 
                                
-        <label>Mot de passe</label> : <input type="text" name="mot de passe" id required />
+        <label>Mot de passe</label> : <input type="password" name="mot de passe" id required />
                                
                            </div>  
                            </p>
@@ -79,34 +75,41 @@
     
                             <p>
                               <br/>
-                              <a href="page_accueil_co.php"> <div class="envoyerco">  <input type="submit" value="Connexion" /> 
-							 </div> </a>
+                             <div class="envoyerco">   <input type="submit" value="Connexion" /></div>
                            
                             </p>
                          </form>
         
-                    
+               </section>     
         
-        </section>
+        </div>
         <section class= "Inscrip"> <h1>Inscription</h1>
-                  <form method="post" action="traitement.php"> 
+                  <form method="post"action="traitement.php">
                       
-                      <p><br/> <div class="PSDO" >    <label>Pseudo :   </label>
+                      <div class="underins">
+                      
+                       <div class="PSDO" >    <label>Pseudo :   </label>
                            <input type="text" name="pseudo" id required class="pseu" ></div>
-                  </p>
-                 
-                  <p> <div class="Mail" > <label>Adresse mail</label> : <input type="email" name="adresse mail" id required />
-                  </p>
+                  
+                 <p>
+                           <div class="Mail" > <label>Adresse mail</label> : <input type="email" name="adresse-mail" id required class="mailins" /> </div>
+                  
+                </p>
+                  
+                <p>    <div class="MDP">
+                            <label>Mot de passe</label> : <input type="text" name="mot de passe" id required class="mdp" />     </div>
                 
-                  <p>
-        <label>Mot de passe</label> : <input type="text" name="mot de passe" id required class="mdp" />
-                 </p>
+               </p>
             
                  <p>
-        <label>Confirmation</label> : <input type="text" name="confirmation du mot de passe"id required class="Conf" />
-                  </p>
+                     <div class="CONF">
+        <label>Confirmation</label> : <input type="text" name="confirmation du mot de passe"id required class="conf" />
+
+                     </div>
+                 </p>
                       
                   <p>
+                      <div class="Naiss">
        <label for="Date">Date de naissance</label>
        <select name="Jour" id="Jour">
            <option value="1">1</option>
@@ -233,7 +236,7 @@
 <option value="2007" >2007</option>
 <option value="2008" >2008</option>
 </select>
-          
+                   </div>
                   </p>
                       
                  
@@ -243,34 +246,31 @@
                   
                 <br/>
             
- <a href="page_accueil_co.php"> <div class="envoyerins" > <input type="submit" value="Connexion" />  </div> </a> 
+<div class="envoyerins" >  <input type="submit" value="Connexion" /></div>
 
             </p>
             
             
             
-            
+                    </div>
             
             </form>
             
         
         </section>
-        <?php include("PiedPage.php") ?>
-           <!-- <footer>
-                 <ul id="fin"> 
-                <span class="fi">
-                <li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
+          <footer>
+                 <ul id="fin"> <!-- en tete  -->
+                <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
                 <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
-                <li> <a href="#"> <h2>Contact</h2> </a</li>
+                     <li> <a href="#"> <h2>Contact</h2> </a></li>
                 <li> <a href="#"> <h2>Aide en ligne </h2> </a> </li>
-            
-                
+              
             </ul>
-                    
-            
-            </footer> -->    
-                    
+</footer>    
+        
+    <script src="Ins_Co.js"></script>
       
     </body>
 </html>
+ 
   
