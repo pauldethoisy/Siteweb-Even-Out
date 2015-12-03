@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="Formulaire_secondaire.css"/>
+        <link rel="stylesheet" href="formulaire_secondaire.css"/>
         <title> Préférences</title>
     </head>
     
