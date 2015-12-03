@@ -5,14 +5,14 @@ if (!$connect) {
     exit();
 }
 
-function update_evenements($nom,$acces,$id) {
+function update_evenements($acces,$nom,$id) {
     global $connect;
-    mysqli_query($connect, "update evenements set nom = '$nom', acces = '$acces' where id='$id'") or die("MySQL Erreur : " . mysqli_error());
+    mysqli_query($connect, "update evenements set acces = '$acces', nom = '$nom' where id='$id'") or die("MySQL Erreur : " . mysqli_error());
 }
 
-function insert_evenements($nom,$acces) {
+function insert_evenements($acces,$nom) {
     global $connect;
-    mysqli_query($connect, "insert into evenements (nom,acces) values ('$nom', '$acces')") or die("MySQL Erreur : " . mysqli_error());
+    mysqli_query($connect, "insert into evenements (acces,nom) values ('$acces', '$nom')") or die("MySQL Erreur : " . mysqli_error());
 }    
 
 function select_evenements() {
@@ -48,25 +48,17 @@ function select_one_event($id) {
                     <?php
                         if (isset($_GET['action']) && $_GET['action'] == "save") {
                             if(!empty ($_GET[id])) {
-                                update_evenements($_GET[nom],$_GET[acces],$_GET[id]);
+                                update_evenements($_GET[acces],$_GET[nom],$_GET[id]);
                             } else {
-                                insert_evenements($_GET[nom],$_GET[acces]);
+                                insert_evenements($_GET[acces],$_GET[nom]);
                             }
                         }
 
                         if (isset($_GET['action']) && $_GET['action'] == "modifier") {
-                            $nom = "";
                             $acces = "";
+                            $nom = "";
                             $id = "" ;
-                           /*
-                            if($_GET['action']=="modifier") {
-                                $result = select_one_event($_GET['id']);
-                                $event = mysqli_fetch_assoc($result);
-                                $nom = $event['nom'];
-                                $acces = $event['acces'];
-                                $id = $event['id'];
-                            }
-                            */
+
                     ?>
                     
                     <legend> Modifications </legend>
@@ -84,7 +76,7 @@ function select_one_event($id) {
                                 <div class="type_acces">
                                     <h5>Le type d'accès</h5>
                                     <div class="bouton3">
-                                        <input type="radio" name="acces" id="public" value="public" autofocus/> <label for="public">Évènement public (accessible par tout le monde)</label>
+                                        <input type="radio" name="acces" id="public" value="public"/> <label for="public">Évènement public (accessible par tout le monde)</label>
                                     </div>
                                     <div class="bouton4">
                                     <input type="radio" name="acces" id="prive" value="prive"/> <label for="prive">Évènement privé (accessible aux utilisateurs invités uniquement)</label>
@@ -122,7 +114,7 @@ function select_one_event($id) {
                                         <label for="nom">Nom de l'évènement:<strong><abbr title="obligatoire">*</abbr></strong></label>
                                     </div>
                                     <div class="input">
-                                        <input type="text" name="nom" id="nom" placeholder="Ex: Marathon de Paris" size="30" autofocus required/>
+                                        <input type="text" name="nom" id="nom" value="<?php echo $nom; ?>" size="30" required/>
                                     </div>
                                 </div>
                                 <div class="date">
@@ -640,14 +632,14 @@ function select_one_event($id) {
                             <div class="bouton_envoi">
                                 <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                                 <input type="hidden" name="action" value="save"/>
-                                <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
+                                <input type="submit" value="Valider" name="valider "class="valider">
                             </div>
                         </div>
                     </form>
                         
                     <?php
                         } else {
-                            $result=select_evenements();
+                            $result = select_evenements(/*$_GET['id']*/);
                     ?> 
                     <legend> Vérifiez le contenu de votre création </legend>
                         <img src="Icones/apercu.png" class="icone" alt="Aperçu"/><br/>
@@ -658,7 +650,18 @@ function select_one_event($id) {
                     <?php
                             if ($event = mysqli_fetch_assoc($result)) {
                     ?>
-
+                        
+                        <div class="type_acces">
+                            <h5>Type d'accès:</h5>
+                    <?php
+                                $accessibilite = $_GET['acces'];
+                                if ($accessibilite == "public")
+                                    echo "Évènement public (accessible par tout le monde)";
+                                else 
+                                    echo "Évènement privé (accessible aux utilisateurs invités uniquement)";
+                    ?>
+                        </div>
+                        
                         <div class="nom_evenement">
                             <h5>Nom de l'évènement:</h5>
                     <?php
@@ -671,16 +674,6 @@ function select_one_event($id) {
                     ?>
                         </div>
 
-                        <div class="type_acces">
-                            <h5>Type d'accès:</h5>
-                    <?php
-                                $accessibilite = $_GET['acces'];
-                                if ($accessibilite == "public")
-                                    echo "Évènement public (accessible par tout le monde)";
-                                else 
-                                    echo "Évènement privé (accessible aux utilisateurs invités uniquement)";
-                    ?>
-                        </div>
                     <?php
                             }
                             mysqli_free_result($result);

@@ -11,9 +11,9 @@ $password='root';
 
 try{
     $connect = new PDO($dsn, $user, $password);
-}
-//Vérifer la connection
-catch (Exeption $e){
+    /*$connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+    $connect->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);*/
+} catch (Exeption $e){
     die('Erreur : ' . $e->getMessage());
 }
 
@@ -27,17 +27,17 @@ function update_evenements($nom,$acces,$id) {
 
 function insert_evenements($nom,$acces) {
     global $connect;
-    mysqli_query($connect, "insert into evenements (nom,acces) values ('$nom', '$acces')") or die("MySQL Erreur : " . mysqli_error());
+    $insert = $connect->prepare("insert into evenements (nom,acces) values ('".$nom."','".$acces."')");
 }    
 
 function select_evenements() {
     global $connect;
-    $result=mysqli_query($connect,"select * from evenements") or die("MySQL Erreur : " . mysqli_error());
+    $result = $connect->prepare("select * from evenements");
     return $result;
 }
 function select_one_event($id) {
     global $connect;
-     $result=mysqli_query($connect,"select * from evenements where id=".$id) or die("MySQL Erreur : " . mysqli_error());
+     $result = $connect->prepare("select * from evenements where id=".$id);
      return $result;
 }
 ?>
@@ -92,7 +92,7 @@ function select_one_event($id) {
                         <img src="Icones/modifier.png" class="icone" alt="Modifier"/><br/>
                         <h1>Modifications</h1>
                         
-                        <form method="POST" action="apercu2.php">
+                        <form method="post" action="apercu3.php">
                             <h2>Remplissez:</h2>
                             
                             <h3>L'évènement:</h3>
@@ -134,7 +134,7 @@ function select_one_event($id) {
                         <h3>Accessibilité</h3>
 
                     <?php
-                            if ($event = mysqli_fetch_assoc($result)) {
+                            if ($event = $result->fetch()) {
                     ?>
 
                         <div class="nom_evenement">
@@ -161,10 +161,10 @@ function select_one_event($id) {
                         </div>
                     <?php
                             }
-                            mysqli_free_result($result);
+                            $result->closeCursor();
                     ?>
 
-                        <a href="apercu2.php?action=modifier">modifier</a>
+                        <a href="apercu3.php?action=modifier">modifier</a>
                         
                     <?php 
                         }

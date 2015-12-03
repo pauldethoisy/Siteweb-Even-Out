@@ -1,3 +1,30 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "root", "EvenOut");
+if (!$connect) {
+    printf("Ã‰chec de la connexion : %s\n", mysqli_connect_error());
+    exit();
+}
+function update_evenements($nom,$acces,$id) {
+    global $connect;
+    mysqli_query($connect, "update evenements set nom = '$nom', acces = '$acces' where id='$id'") or die("MySQL Erreur : " . mysqli_error());
+}
+function insert_evenements($nom,$acces) {
+    global $connect;
+    mysqli_query($connect, "insert into evenements (nom,acces) values ('$nom', '$acces')") or die("MySQL Erreur : " . mysqli_error());
+}    
+function select_evenements() {
+    global $connect;
+    $result=mysqli_query($connect,"select * from evenements") or die("MySQL Erreur : " . mysqli_error());
+    return $result;
+}
+function select_one_event($id) {
+    global $connect;
+     $result=mysqli_query($connect,"select * from evenements where id=".$id) or die("MySQL Erreur : " . mysqli_error());
+     return $result;
+}
+?>
+
+<!DOCTYPE HTML>
 <!DOCTYPE html>
 <html>
     
@@ -11,15 +38,36 @@
         
         <?php include("menu.php") ?>
         
-        <?php include("en_tete.php") ?>
-
-        <div class="creer">
+        <?php include("entete.php") ?>
+        
+        <div class="apercu">
             <section>
-                <article>
-                    <fieldset>  
-                        <legend> Créer un évènement </legend>
+                <fieldset>
+        <?php
+        if (isset($_GET['action']) && $_GET['action'] == "save") {
+            if(!empty ($_GET[id])) {
+                update_evenements($_GET[nom],$_GET[acces],$_GET[id]);
+            } else {
+                insert_evenements($_GET[nom],$_GET[acces]);
+            }
+        }
+
+       if (isset($_GET['action']) && $_GET['action'] == "modifier") {
+            $nom = "";
+            $acces = "";
+            $id = "" ;
+
+            if($_GET['action']=="modifier") {
+                $result = select_one_event($_GET['id']);
+                $event = mysqli_fetch_assoc($result);
+                $nom = $event['nom'];
+                $acces = $event['acces'];
+                $id = $event['id'];
+            } ?>
+
+                    <legend> Modifications </legend>
                         
-                        <h2>Déterminez:</h2>
+                        <h2>Remplissez les zones à modifier:</h2>
                         
                         <form method="get" action="apercu4.php">
                             
@@ -70,7 +118,7 @@
                                         <label for="nom">Nom de l'évènement:<strong><abbr title="obligatoire">*</abbr></strong></label>
                                     </div>
                                     <div class="input">
-                                        <input type="text" name="nom" id="nom" placeholder="Ex: Marathon de Paris" size="30" required/>
+                                        <input type="text" name="nom" id="nom" value="<?php echo $nom; ?>" size="30" autofocus required/>
                                     </div>
                                 </div>
                                 <div class="date">
@@ -440,10 +488,10 @@
                                         <p>Pour plus de vendeurs, allez sur le site e l'évènement</p>
                                     </div>
                                     <div class="label">
-                                        <label for="nom_vendeur_principal">Noms du vendeur principal: </label>
+                                    <label for="nom_vendeur_principal">Noms du vendeur principal: </label>
                                     </div>
                                     <div class="input">
-                                        <input type="text" name="nom_vendeur_principal" id="nom_vendeur_principal" placeholder="Ex: Fnac ..." size="30"/>
+                                        <input type="text" name="nom_vendeur_principal" id="nom_vendeur_principal" placeholder="Ex: Fnac ... " size="30"/>
                                     </div>
                                     <div class="label">
                                         <label for="url_site_vendeur">Siteweb du vendeur: </label>
@@ -452,16 +500,16 @@
                                         <input type="url" name="url_site_vendeur" id="url_site_vendeur" placeholder="Ex: www.sitefactice.fr"/>
                                     </div>
                                     <div class="image_vendeur">
-                                        <h5>Logo</h5>
-                                        <div class="label">
-                                            <label for="url_logo_vendeur">Insérez un logo:</label>
-                                        </div>
-                                        <div class="input">
-                                            <input type="file" name="url_logo_vendeur" id="url_logo_vendeur"/>
-                                        </div>
-                                        <div class="label2">
-                                            <label for="url_logo_vendeur">(format: .JPG, .JPEG, .PNG ou .GIF)</label>
-                                        </div>
+                                    <h5>Logo</h5>
+                                    <div class="label">
+                                        <label for="url_logo_vendeur">Insérez un logo:</label>
+                                    </div>
+                                    <div class="input">
+                                        <input type="file" name="url_logo_vendeur" id="url_logo_vendeur"/>
+                                    </div>
+                                    <div class="label2">
+                                        <label for="url_logo_vendeur">(format: .JPG, .JPEG, .PNG ou .GIF)</label>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="types_prix">
@@ -584,21 +632,57 @@
                                     </div>
                                 </div>
                             </div>
-
+                        
                             <div class="bouton_envoi">
                                 <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                                 <input type="hidden" name="action" value="save"/>
                                 <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
                             </div>
+                        </div>
+                    </form>
 
-                        </form>
-                    </fieldset>
-                </article>
-            </section>
-        </div>
+            <?php
 
-        <?php include("PiedPage.php") ?>
-        
+        } else {
+            $result=select_evenements();
+            ?>
+                    <legend> Vérifiez le contenu de votre création </legend>
+                        <img src="Icones/apercu.png" class="icone" alt="Aperçu"/><br/>
+                        <h1>Aperçu</h1>
+                        <h2>Vérifiez:</h2>
+                        <h3>Accessibilité</h3>
+
+                    <?php
+                            if ($event = mysqli_fetch_assoc($result)) {
+                    ?>
+
+                        <div class="nom_evenement">
+                            <h5>Nom de l'évènement:</h5>
+                    <?php
+                                $libelle_evenement = $_GET['nom'];
+                                $nom = $event['nom'];
+                                if ($libelle_evenement == $nom)
+                                    echo $nom;
+                                else 
+                                    echo $libelle_evenement;
+                    ?>
+                        </div>
+
+                        <div class="type_acces">
+                            <h5>Type d'accès:</h5>
+                    <?php
+                                $accessibilite = $_GET['acces'];
+                                if ($accessibilite == "public")
+                                    echo "Évènement public (accessible par tout le monde)";
+                                else 
+                                    echo "Évènement privé (accessible aux utilisateurs invités uniquement)";
+                    ?>
+                        </div>
+
+                    <?php   }
+                            mysqli_free_result($result);
+                            echo '<a href="apercu4.php?action=modifier&id='.$event['id'].'">modifier</a>';
+                        } 
+                    ?>
     </body>
-    
 </html>
