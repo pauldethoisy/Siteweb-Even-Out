@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html>
     
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="Formulaire_secondaire.css"/>
-        <title> Even'Out</title>
+        <title> Préférences</title>
     </head>
     
     <body>
@@ -45,7 +44,7 @@
         
         
         <div class="recherche">
-            <a href="recherche.html"> recherche avancée</a>
+            <a href="recherche_avancee.php"> recherche avancée</a>
         </div>
 
         <div class="creer">
@@ -204,6 +203,12 @@
                 </fieldset>
             </section>
         </div>
+		                     <p>
+                              <br/>
+                              <a href="page_accueil_co.php"> <div class="envoyerco">  <input type="submit" value="Envoyer" /> 
+							 </div> </a>
+                           
+                            </p>
             
      <?php include("PiedPage.php") ?>
      <!--<footer>
@@ -226,5 +231,3 @@
 
     </body>
 </html> 
-
-

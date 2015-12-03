@@ -3,46 +3,19 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="recherche.css"/>
+        <link rel="stylesheet" href="recherche_avancee.css"/>
         <title> Even'Out</title>
     </head>
-     <body>
-    <?php include("menu.php") ?>
-        
-    <?php include("en_tete.php") ?>
-         <!--<nav>
-             <ul id="menu"> 
-                 <span class="evt">
-                    <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li></span>
-                    <li> <a href="agenda.html"> <h2> Agenda </h2> </a> </li> 
-                    <li> <a href="creer.html"> <h2>Créer un évènement</h2> </a></li>
-                    <li> <a href="forum.html"> <h2>Forum</h2> </a> </li>
-                    <li> <a href="mon_compte.html"> <h2> Mon compte</h2> </a> </li>
-            </ul>
-         </nav>
-        
-         <img id="even" src="even.png" width="150" height="150">
-         
-         </ul>
     
-    
-    <header class ="fond">
-             
-        <img id="paris" src="paris.jpg" width="1333" height="407">
-                
-    </header>-->
-        
-    <div id="searchbar">  <!-- Code pour la barre de recherche -->
-                
-        <form action="search"  method="get" class="formulaire">            
-            <input id="search" type="text" placeholder="Rechercher un évènement">
-            <input id="search-btn" type="submit" value="rechercher">
-        </form>
-            
-    </div>
+    <body>
+     
+        <?php include("menu.php"); ?>
+       
+        <?php include("en_tete.php"); ?>
+           
         
     <div class="recherche">   
-        <a href="recherche.html"> recherche avancée</a>
+        <a href="recherche_avancee.php"> recherche avancée</a>
     </div>
 
     <div id="formulaire">
@@ -304,21 +277,8 @@
         </fieldset>
         
     </div>
-           
-    
-    <?php include("PiedPage.php") ?>
-    <!--<footer>
-                 
         
-        <ul id="fin"> 
-            <span class="fi"><li> <a href="#"> <h2>Nous connaitre </h2> </a> </li></span>
-            <li> <a href="#"> <h2> Nous suivre</h2> </a> </li> 
-            <li> <a href="#"> <h2>Contact</h2> </a></li>
-            <li> <a href="#"> <h2>Aide en ligne </h2> </a> </li>
-        </ul>
-                
-    </footer>-->
-
+        <?php include("PiedPage.php"); ?>
 
     </body>
 </html>

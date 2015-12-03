@@ -682,6 +682,7 @@ function select_one_event($id) {
                     <?php   }
                             mysqli_free_result($result);
                             echo '<a href="apercu4.php?action=modifier&id='.$event['id'].'">modifier</a>';
+                            echo '<a href="page_accueil_co.php"><input type="submit" value="Envoyer" name="envoyer "class="envoyer"></a>';
                         } 
                     ?>
     </body>

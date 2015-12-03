@@ -8,7 +8,7 @@
         
         </li>
         <li> <a href="forum.php"> <h2>Forum</h2> </a> </li>
-         <li> <a href="Inscription.Connexion.php"> <h2> Mon compte</h2> </a> 
+         <li> <a href="mon_profil.php"> <h2> Mon compte</h2> </a> 
         
         </li>
     </ul>
