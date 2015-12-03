@@ -232,7 +232,21 @@
 
     </form>
     </div>
-	<?php include("pied.php"); ?>
+	
+	
+                      
+                 
+    
+    
+              <p>
+                  
+                <br/>
+            
+ <a href="Formulaire_secondaire.php"> <div class="envoyerins" > <input type="submit" value="Envoyer" />  </div> </a> 
+
+            </p>
+            
+	<?php include("PiedPage.php"); ?>
 
 
 
