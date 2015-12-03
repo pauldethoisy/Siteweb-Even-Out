@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html >
 <html>
     <head>
@@ -279,7 +278,7 @@
         
     </div>
         
-        <?php include("pied.php"); ?>
+        <?php include("PiedPage.php"); ?>
 
     </body>
 </html>
