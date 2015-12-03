@@ -585,9 +585,12 @@
                                 </div>
                             </div>
 
-                            <div class="bouton_envoi">
-                                <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
-                            </div>
+                             <p>
+                              
+                              <a href="page_accueil_co.php"> <div class="bouton_envoi"> <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
+							 </div> </a>
+                             </p>
+							
 
                         </form>
                     </fieldset>
