@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="Inscription_Connexion.css"/>
+        <link rel="stylesheet" href="inscription_connexion.css"/>
         <title> Even'Out</title>
     </head>
     
