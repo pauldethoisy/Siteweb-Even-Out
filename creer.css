@@ -286,9 +286,14 @@ h5
   margin-left: 20%;
 }
 
-.input, .select, .textarea2, .label2
+.input, .input1, .select, .textarea2, .label2
 {
   position: relative;
+  margin-left: 50%;
+}
+
+.input2
+{
   margin-left: 50%;
 }
 

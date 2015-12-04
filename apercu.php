@@ -4,13 +4,13 @@ if (!$connect) {
     printf("Ã‰chec de la connexion : %s\n", mysqli_connect_error());
     exit();
 }
-function update_evenements($nom,$acces,$id) {
+function update_evenements($nom,$acces,$heure1,$minute1,$heure2,$minute2,$description,$id) {
     global $connect;
-    mysqli_query($connect, "update evenements set nom = '$nom', acces = '$acces' where id='$id'") or die("MySQL Erreur : " . mysqli_error());
+    mysqli_query($connect, "update evenements set nom = '$nom', acces = '$acces', heure1 = '$heure1', minute1 = '$minute1', heure2 = '$heure2', minute2 = '$minute2', description = '$description' where id='$id'") or die("MySQL Erreur : " . mysqli_error());
 }
-function insert_evenements($nom,$acces) {
+function insert_evenements($nom,$acces,$heure1,$minute1,$heure2,$minute2,$description) {
     global $connect;
-    mysqli_query($connect, "insert into evenements (nom,acces) values ('$nom', '$acces')") or die("MySQL Erreur : " . mysqli_error());
+    mysqli_query($connect, "insert into evenements (nom,acces,heure1,minute1,heure2,minute2,description) values ('$nom', '$acces', '$heure1', '$minute1', '$heure2', '$minute2', '$description')") or die("MySQL Erreur : " . mysqli_error());
 }    
 function select_evenements() {
     global $connect;
@@ -45,15 +45,20 @@ function select_one_event($id) {
         <?php
         if (isset($_GET['action']) && $_GET['action'] == "save") {
             if(!empty ($_GET[id])) {
-                update_evenements($_GET[nom],$_GET[acces],$_GET[id]);
+                update_evenements($_GET[nom],$_GET[acces],$_GET[heure1],$_GET[minute1],$_GET[heure2],$_GET[minute2],$_GET[description],$_GET[id]);
             } else {
-                insert_evenements($_GET[nom],$_GET[acces]);
+                insert_evenements($_GET[nom],$_GET[acces],$_GET[heure1],$_GET[minute1],$_GET[heure2],$_GET[minute2],$_GET[description]);
             }
         }
 
        if (isset($_GET['action']) && $_GET['action'] == "modifier") {
             $nom = "";
             $acces = "";
+            $heure1 = "";
+            $minute1 = "";
+            $heure2 = "";
+            $minute2 = "";
+            $description = "";
             $id = "" ;
 
             if($_GET['action']=="modifier") {
@@ -61,6 +66,11 @@ function select_one_event($id) {
                 $event = mysqli_fetch_assoc($result);
                 $nom = $event['nom'];
                 $acces = $event['acces'];
+                $heure1 = $event['heure1'];
+                $minute1 = $event['minute1'];
+                $heure2 = $event['heure2'];
+                $minute2 = $event['minute2'];
+                $description = $event['description'];
                 $id = $event['id'];
             } ?>
 
@@ -138,200 +148,28 @@ function select_one_event($id) {
                                 <div class="heure">
                                     <h5>Heure</h5>
                                     <div class="bouton1">
-                                        <input type="checkbox" name"heure_debut" id="heure_debut" checked required/><label for="heure_debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
+                                        <input type="checkbox" name="heure_debut" id="heure_debut" checked required/><label for="heure_debut"> De début:<strong><abbr title="obligatoire">*</abbr></strong></label>
                                     </div>
-                                    <div class="select">
-                                        <select name="heures1" id="heures1">
-                                        <option value="00">00</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                        </select>
+                                    <div class="input">
+                                        <input type="text" name="heure1" id="heure1" value="<?php echo $heure1; ?>" placeholder="00" size="3" required/>
                                         h
-                                        <select name="minutes1" id="minutes1">
-                                            <option value="00">00</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                            <option value="32">32</option>
-                                            <option value="33">33</option>
-                                            <option value="34">34</option>
-                                            <option value="35">35</option>
-                                            <option value="36">36</option>
-                                            <option value="37">37</option>
-                                            <option value="38">38</option>
-                                            <option value="39">39</option>
-                                            <option value="40">40</option>
-                                            <option value="41">41</option>
-                                            <option value="42">42</option>
-                                            <option value="43">43</option>
-                                            <option value="44">44</option>
-                                            <option value="45">45</option>
-                                            <option value="46">46</option>
-                                            <option value="47">47</option>
-                                            <option value="48">48</option>
-                                            <option value="49">49</option>
-                                            <option value="50">50</option>
-                                            <option value="51">51</option>
-                                            <option value="52">52</option>
-                                            <option value="53">53</option>
-                                            <option value="54">54</option>
-                                            <option value="55">55</option>
-                                            <option value="56">56</option>
-                                            <option value="57">57</option>
-                                            <option value="58">58</option>
-                                            <option value="59">59</option>
-                                        </select>
+                                        <input type="text" name="minute1" id="minute1" placeholder="00" size="3" required/>
                                         min
                                     </div>
                                     <div class="bouton2">
                                         <input type="checkbox" name="heure_fin" id="heure_fin"/><label for="heure_fin"> De fin:</label>
                                     </div>
-                                    <div class="select">
-                                        <select name="heures2" id="heures2">
-                                            <option value="00">00</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                        </select>
+                                    <div class="input">
+                                        <input type="text" name="heure2" id="heure2" placeholder="00" size="3" required/>
                                         h
-                                        <select name="minutes2" id="minutes2">
-                                            <option value="00">00</option>
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                            <option value="32">32</option>
-                                            <option value="33">33</option>
-                                            <option value="34">34</option>
-                                            <option value="35">35</option>
-                                            <option value="36">36</option>
-                                            <option value="37">37</option>
-                                            <option value="38">38</option>
-                                            <option value="39">39</option>
-                                            <option value="40">40</option>
-                                            <option value="41">41</option>
-                                            <option value="42">42</option>
-                                            <option value="43">43</option>
-                                            <option value="44">44</option>
-                                            <option value="45">45</option>
-                                            <option value="46">46</option>
-                                            <option value="47">47</option>
-                                            <option value="48">48</option>
-                                            <option value="49">49</option>
-                                            <option value="50">50</option>
-                                            <option value="51">51</option>
-                                            <option value="52">52</option>
-                                            <option value="53">53</option>
-                                            <option value="54">54</option>
-                                            <option value="55">55</option>
-                                            <option value="56">56</option>
-                                            <option value="57">57</option>
-                                            <option value="58">58</option>
-                                            <option value="59">59</option>
-                                        </select>
+                                        <input type="text" name="minute2" id="minute2" placeholder="00" size="3" required/>
                                         min
                                     </div>
                                 </div>
                                 <div class="description_evenement">
                                     <h5>Description<strong><abbr title="obligatoire">*</abbr></strong></h5>
                                     <div class="textarea">
-                                        <textarea id="description" name="description" required>A propos de l'organisation de l'évènement :</textarea>
+                                        <input type="text" id="description" name="description" placeholder="A propos de l'organisation de l'évènement ... " required>
                                     </div>
                                 </div>
                                 <div class="photo_principale">
@@ -676,6 +514,57 @@ function select_one_event($id) {
                                 else 
                                     echo "Évènement privé (accessible aux utilisateurs invités uniquement)";
                     ?>
+                        </div>
+                        
+                        <div class="heure">
+                            <h5>Commence à:</h5>
+                    <?php
+                                $heure_debut = $_GET['heure1'];
+                                $heure1 = $event['heure1'];
+                                if ($heure_debut == $heure1)
+                                    echo $heure1;
+                                else 
+                                    echo $heure_debut;
+                    ?>
+                            h
+                    <?php
+                                $minute_debut = $_GET['minute1'];
+                                $minute1 = $event['minute1'];
+                                if ($minute_debut == $minute1)
+                                    echo $minute1;
+                                else 
+                                    echo $minute_debut;
+                    ?>
+                            <h5>Finit à:</h5>
+                    <?php
+                                $heure_fin = $_GET['heure2'];
+                                $heure2 = $event['heure2'];
+                                if ($heure_fin == $heure2)
+                                    echo $heure2;
+                                else 
+                                    echo $heure_fin;
+                    ?>
+                            h
+                    <?php
+                                $minute_fin = $_GET['minute2'];
+                                $minute2 = $event['minute2'];
+                                if ($minute_fin == $minute2)
+                                    echo $minute2;
+                                else 
+                                    echo $minute_fin;
+                    ?>
+                        </div>
+                        
+                        <div class="description_evenement">
+                                    <h5>Description de l'évènement:</h5>
+                    <?php
+                                $description_evenement = $_GET['description'];
+                                $description = $event['description'];
+                                if ($description_evenement == $description)
+                                    echo $description;
+                                else 
+                                    echo $description_evenement;
+                    ?>   
                         </div>
 
                     <?php   }
