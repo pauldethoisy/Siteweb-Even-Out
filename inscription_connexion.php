@@ -3,31 +3,35 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="Inscription_Connexion.css"/>
+        <link rel="stylesheet" href="inscription_connexion.css"/>
         <title> Even'Out</title>
     </head>
     
     <body>
         
         
-        <nav>
-            <ul id="menu"> <!-- en tete  -->
+       <!--<nav>
+            <ul id="menu"> <!-- en tete  >
                 <li> <a href="Evènement.html"> <h2>Evènements </h2> </a> </li>
                 <li> <a href="agenda.html"> <h2> Agenda </h2> </a> </li> 
                 <li> <a href="creer.html"> <h2>Créer un évènement</h2> </a></li>
                 <li> <a href="forum.html"> <h2>Forum</h2> </a> </li>
                 <li> <a href="mon_compte.html"> <h2> Mon compte</h2> </a> </li>
             </ul>
-        </nav>
+        </nav> -->
+
+        <?php include("menu.php"); ?>
+       
+        <?php include("en_tete.php"); ?>
         
-     <header class ="fond">
-             <!-- photo du site -->
+     <!--header class ="fond">
+             <!-- photo du site >
             
             <a href="#"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
                 <img id="paris" src="image/paris.jpg" width="1200" height="440">
             
-              <div id="searchbar">  <!-- Code pour la barre de recherche -->
+              <div id="searchbar">  <!-- Code pour la barre de recherche >
                 <form action="search"  method="get" class="formulaire">
                     
                     <input id="search" type="text" placeholder="Rechercher un évènement"/>
@@ -38,10 +42,10 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche.html"> recherche avancée</a>
+            <a href="recherche_avancee.html"> recherche avancée</a>
         </div>
             
- </header>
+ </header-->
         
             <section class="Conect">   <h1>Connexion</h1>
                         <form method="post" action="traitement.php">
@@ -75,7 +79,7 @@
     
                             <p>
                               <br/>
-                             <div class="envoyerco">   <input type="submit" value="Connexion" /></div>
+                            <a href="page_accueil_co.php"> <div class="envoyerco">   <input type="submit" value="Connexion" /></div></a>
                            
                             </p>
                          </form>
@@ -246,7 +250,7 @@
                   
                 <br/>
             
-<div class="envoyerins" >  <input type="submit" value="Connexion" /></div>
+<a href="page_accueil_co.php"><div class="envoyerins" >  <input type="submit" value="Connexion" /></div></a>
 
             </p>
             

@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="en_tete.css"/>
 			<!-- photo du site -->
             
-            <a href="page_accueil.php"> <img id="even" src="even.png" width="150" height="150"> </a>
+            <a href="page_accueil.php"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
-                <img id="paris" src="Paris.jpg" width="1200" height="440">
+                <img id="paris" src="image/paris.jpg" width="1200" height="440">
             
               <div id="searchbar">  <!-- Code pour la barre de recherche -->
                 <form action="search"  method="get" class="formulaire">

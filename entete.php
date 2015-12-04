@@ -1,7 +1,7 @@
  <header class ="fond">
              <!-- photo du site -->
             
-            <a href="#"> <img id="even" src="image/even.png" width="150" height="150"> </a>
+            <a href="page_accueil.php"> <img id="even" src="image/even.png" width="150" height="150"> </a>
         
                 <img id="paris" src="image/creer.jpg" width="1200" height="440">
             
@@ -15,7 +15,7 @@
          </div>
             
             <div class="recherche">
-            <a href="recherche.html"> recherche avancée</a>
+            <a href="recherche_avancee.php"> recherche avancée</a>
         </div>
             
  </header>

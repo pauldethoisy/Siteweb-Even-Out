@@ -29,7 +29,7 @@ Soyez organisé en organisant vos sorties et vos déplacements entre amis.</p>
                     <legend class="titre1"> Nouveautés</legend>
                         <img src="image/marathon.jpg"  class="marathon" alt="marathon"/>
 						
-                        <a href="info_event1.php"> <img src="image/cinema.jpg" class="cinema" alt="cinema" border="0" /> </a>
+                        <a href="info_even1.php"> <img src="image/cinema.jpg" class="cinema" alt="cinema" border="0" /> </a>
                         
                         <img src="image/johny.jpg" class="johny" alt="johny"/>
                             <span id="course"> Marathon de Paris 2015 </span> 
