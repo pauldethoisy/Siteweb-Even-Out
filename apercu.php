@@ -41,27 +41,29 @@ function select_one_event($id) {
         
         <div class="apercu">
             <section>
-                <fieldset>   
-                    <?php
-                        if (isset($_GET['action']) && $_GET['action'] == "save") {
-                            if(!empty ($_GET[id])) {
-                                update_evenements($_GET[nom],$_GET[acces],$_GET[id]);
-                            } else {
-                                insert_evenements($_GET[nom],$_GET[acces]);
-                            }
-                        }
-                        if (isset($_GET['action']) && $_GET['action'] == "modifier") {
-                           /* $result=select_evenements($_GET['id']);
-                            $event = mysqli_fetch_assoc($result);
-                            $nom = $event['nom'];
-                            $acces = $event['acces'];
-                            $id = $event['id'];*/
-                            $nom = "";
-                            $acces = "";
-                            $id = "" ;
-                            
-                    ?>
-                    
+                <fieldset>
+        <?php
+        if (isset($_GET['action']) && $_GET['action'] == "save") {
+            if(!empty ($_GET[id])) {
+                update_evenements($_GET[nom],$_GET[acces],$_GET[id]);
+            } else {
+                insert_evenements($_GET[nom],$_GET[acces]);
+            }
+        }
+
+       if (isset($_GET['action']) && $_GET['action'] == "modifier") {
+            $nom = "";
+            $acces = "";
+            $id = "" ;
+
+            if($_GET['action']=="modifier") {
+                $result = select_one_event($_GET['id']);
+                $event = mysqli_fetch_assoc($result);
+                $nom = $event['nom'];
+                $acces = $event['acces'];
+                $id = $event['id'];
+            } ?>
+
                     <legend> Modifications </legend>
                         
                         <h2>Remplissez les zones à modifier:</h2>
@@ -631,15 +633,18 @@ function select_one_event($id) {
                             </div>
                         
                             <div class="bouton_envoi">
+                                <input type="hidden" name="id" value="<?php echo $id; ?>"/>
+                                <input type="hidden" name="action" value="save"/>
                                 <input type="submit" value="Envoyer" name="envoyer "class="envoyer">
                             </div>
                         </div>
                     </form>
-                        
-                    <?php
-                        } else {
-                            $result=select_evenements();
-                    ?> 
+
+            <?php
+
+        } else {
+            $result=select_evenements();
+            ?>
                     <legend> Vérifiez le contenu de votre création </legend>
                         <img src="Icones/apercu.png" class="icone" alt="Aperçu"/><br/>
                         <h1>Aperçu</h1>
@@ -672,19 +677,12 @@ function select_one_event($id) {
                                     echo "Évènement privé (accessible aux utilisateurs invités uniquement)";
                     ?>
                         </div>
-                    <?php
-                            }
-                            mysqli_free_result($result);
-                    ?>
 
-                        <a href="apercu2.php?action=modifier">modifier</a>
-                        
-                    <?php 
-                        }
+                    <?php   }
+                            mysqli_free_result($result);
+                            echo '<a href="apercu4.php?action=modifier&id='.$event['id'].'"><div class="bouton_envoi"><input type="submit" value="Modifier" name="modifier "class="modifier"></a>';
+                            echo '<a href="page_accueil_co.php"><input type="submit" value="Envoyer" name="envoyer "class="envoyer"></div></a>';
+                        } 
                     ?>
-                        
-                </fieldset>
-            </section>
-        </div>
     </body>
 </html>

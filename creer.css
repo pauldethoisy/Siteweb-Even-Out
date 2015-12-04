@@ -17,12 +17,13 @@ body
     font-size: 12px;
     color: white;
     position: relative;
-    margin-right: 112px;
+    margin-right: 3%;
+   
 }
 
 .evt
 {
-    margin-left: 200px;
+    margin-left: 275px;
 }
 #menu a
 {
@@ -34,11 +35,64 @@ body
 {
     border-width: 1px solid black;
     background-color: black;
+    margin-top: -5px;
    
     
 }
 
-nav
+
+#menu li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        top: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menu li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 0px solid black; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul li                
+{
+        border-top : 0px solid black; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu li ul 
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-left     : 0px solid black ; /* Petite bordure à gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu li ul                 
+{
+        border-left : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */    
+{
+        color: #EA008A; /* On passe le texte en noir... */
+        background: black; /* ... et au contraire, le fond en blanc */
+}
+
+
+#menu li:hover ul , #menu li.sfhover ul  /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: 20em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+#mn
 {
     border-width: 1px solid black;
     background-color: black;
@@ -46,12 +100,15 @@ nav
 
 .fond
 {
-    position: absolute;
+    position: relative;
+    
 }
 
 #paris
 {
-  position: absolute;
+  position: relative;
+  margin-top:10.5%;
+  
   
 }
 
@@ -59,7 +116,7 @@ nav
 
 {
     position: absolute;
-    top:2px;
+    margin-top:-20px;
     left:10px;
     z-index: 5;
 }
@@ -67,15 +124,16 @@ nav
 
 #searchbar
 {   position: absolute;
-    margin-top: 260px;
-    margin-left: 565px;
+    margin-left: 45%;
     height: 80px;
-    z-index: 5;
+    z-index: 10;
+    margin-top: -550px;
     }
 
 
 #search
 {
+    margin-top: 0px;
     border-radius: 2em;
     width: 392px;
     height: 34px;
@@ -84,30 +142,40 @@ nav
     font-size: 15px;
     letter-spacing: 1px;
     padding: 5px 10px 5px 10px;
+    background-color: white;
+    color: black;
+   
 }
 
-#search-btn{
+#search-btn
+{
     height: 30px;
     width: 100px;
     color: white;
     background-color: #EA008A;
+    margin-left: 76%;
+    margin-top: -90px;
     
 }
+
+
+
 
 .recherche
 {
     position: absolute;
-    margin-top: 350px;
+    margin-top: -485px;
     margin-left: 889px;
+    font-size: 20px;
+    z-index: 5;
     
-   font-size: 20px;
     
 }
 
 .recherche a /* Liens par défaut (non survolés) */
 {
-   text-decoration: none;
-   color:yellow;
+    text-decoration: none;
+    color:black;
     font-size: 15px;
   
   
@@ -115,20 +183,20 @@ nav
 
 .recherche a:hover /* Apparence au survol des liens */
 {
-  text-decoration: underline;
-   color: yellow;
+   text-decoration: underline;
+   color: #EA008A;
 }
 
 /*Code pour la section de la page*/
 
-/*Code commun aux 2 pages creer.php*/
+/*Code commun aux pages creer.php et apercu.php*/
 fieldset
 {
-  position: absolute;
-  margin-top: 500px;
-  margin-left:180px ;
+  position: relative;
+  margin-top: 100px;
+  margin-left:145px ;
   width: 880px;
-  height: 700px;
+  height: 1000px;
   overflow: auto;
 }
  
@@ -189,7 +257,7 @@ h5
   margin-left: 20%;
 }
 
-/*Code pour la page creer1.php*/
+/*Code pour la page creer.php*/
 
 .boutons
 {
@@ -211,7 +279,6 @@ h5
   margin-left: 45%;
   margin-top: 10%;
 }
-/*Code pour la page creer2.php*/
 
 .label, .bouton1, .bouton2
 {
@@ -291,9 +358,11 @@ h5
 footer
 {
     border-width: 1px solid black;
+    width: 1200px;
+    height: 50px;
     background-color: black;
     display: inline-block;
-  
+    margin-top: 5%;
 }
 
 #fin li
@@ -301,17 +370,17 @@ footer
     display: inline-block;
     font-size: 12px;
     color: white;
+    margin-top: -1.5%;
 }
 
 
 #fin a
-{ color: white;
+{ 
+  color: white;
   text-decoration: none;
   display: inline-block;
   margin-right: 40px;
-  margin-left: 40px;
-    
-     
+  margin-left: 40px;  
 }
 
 .fi
